@@ -1,0 +1,453 @@
+<dictionary>
+
+<entry>
+<word>lamia</word>
+<usage>[là-mia] (arc. lammia) s.f.</usage>
+<translation>Mostro femminile delle antiche credenze popolari (classiche e medievali), che si diceva succhiasse il sangue dei bambini o li divorasse</translation>
+<phrase>Se in sogno v'assalgono - sudate visioni / Di lamie e mandragore - di spettri e demoni</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>murra</word>
+<usage>[mùr-ra] s.f.</usage>
+<translation>Pietra semipreziosa (probabilmente la fluorite) usata anticamente nella fabbricazione di vasi e coppe.</translation>
+<phrase>... il montuoso / Suol del suo regno di smeraldi, e murra</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>nardo</word>
+<usage>[nàr-do] s.m.</usage>
+<translation>Altro nome della lavanda e della citronella</translation>
+<phrase>Alle iene venia col crin spruzzato / D'olio di nardo e co' lascivi odori</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>leppo</word>
+<pronunciation>[lép-po]</pronunciation>
+<usage>s.m., arc.</usage>
+<translation>Puzzo; part., l’odore sgradevole che emanano le materie untuose a contatto della fiamma.</translation>
+<phrase>Redìa col leppo delle sozze iene</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>palomba</word>
+<usage>[pa-lóm-ba]  s.f., region.</usage>
+<translation>colombella</translation>
+<phrase>A rapina d'agnelle e di palombe</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>bisso</word>
+<pronunciation>[bìs-so]</pronunciation>
+<usage>s.m.</usage>
+<translation>Finissima tela di lino, originaria dell’India e dell’Egitto</translation>
+<phrase>Il Re sul regio letto, / D'oro, di bisso e porpora / E' il fluido guancial</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>cataletto</word>
+<pronunciation>[ca-ta-lèt-to]</pronunciation>
+<usage>s.m.</usage>
+<translation>Il sostegno della bara durante il trasporto.</translation>
+<phrase>Pur spaventato e livido / Ha il Re del cataletto / La posa funeral.</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>olibano</word>
+<usage>[o-lì-ba-no]  s.m., arc. o poet.</usage>
+<translation>incenso</translation>
+<phrase>E i fumi dell'olibano / In odorosa danza / Si vedono vagar.</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>lurco</word>
+<pronunciation>[lùr-co]</pronunciation>
+<usage>agg. (pl.m. –chi), lett.</usage>
+<translation>Mangione e beone ingordo: epiteto medievale della nazione germanica.</translation>
+<phrase>un lurco gigante</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>zendado</word>
+<usage>[zen-dà-do] (meno com. zendale) s.m., arc. o poet.</usage>
+<translation>Drappo sottile e finissimo o velo, per lo più di seta; part., manto o scialle con il quale si coprivano il capo e le spalle le donne.</translation>
+<phrase>L'oscuro zendado ti togli da testa, / Ch'io sappia, fanciulla, se lieta o se mesta / Sia quella tua fronte ch'io voglio baciar.</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>foia</word>
+<usage>[fò-ia] s.f.</usage>
+<translation>Eccitazione libidinosa animalesca;estens.  Brama frenetica.</translation>
+<phrase>Per l'acre geenna! Per l'Orco e la foia!</phrase>
+<wchecks>3</wchecks>
+</entry>
+
+<entry>
+<word>cammeo</word>
+<usage>[cam-mè-o]  (raro cameo) s.m.</usage>
+<translation>Pietra o gemma lavorata a tutto tondo o, più spesso, a rilievo.</translation>
+<phrase>T'accosta o faniulla dal sen di cameo</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>lepido</word>
+<usage>[lè-pi-do]  agg.</usage>
+<translation>Piacevolmente arguto e spiritoso</translation>
+<phrase>Un fier gigante e un lepido / Nano son presso al Duca</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>nimbo</word>
+<pronunciation>[nìm-bo] </pronunciation>
+<usage>s.m.</usage>
+<translation>Luce intensa e circoscritta, disco luminoso posto sulla testa o intorno a essa, nell’iconografia sacra pagana e quindi cristiana.</translation>
+<phrase>Le corazze son folgori - le corone son nimbi.</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>nitro</word>
+<usage>[nì-tro] s.m.</usage>
+<translation>arc. Nitrato di potassio, detto anche salnitro.</translation>
+<phrase>Curvi famigli tergono - nel nitro i regi piè.</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>nottola</word>
+<pronunciation>[nòt-to-la] </pronunciation>
+<usage>s.f.</usage>
+<translation>Pipistrello dei Vespertilionidi</translation>
+<phrase>Danzan falene e nottole.</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>murrina</word>
+<pronunciation>[mur-rì-na]</pronunciation>
+<usage>s.f.</usage>
+<translation>Oggetto di vetro ottenuto saldando al calore del fuoco più canne vitree monocrome o variamente colorate, oppure riunendo pezzi di vetro di diversa colorazione.</translation>
+<phrase>Coppe murrine ed anfore</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>cuculiare</word>
+<usage>[cu-cu-lià-re] v.tr. (cucùlio, cucùli, ecc.), non com.</usage>
+<translation>Beffare, canzonare; propr., prendersi gioco di qualcuno facendogli il verso del cuculo.</translation>
+<phrase>Piangi, cuculia, imagina - qualche nuovo capriccio.</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>paone</word>
+<usage>[pa-ó-ne] s.m.</usage>
+<translation>Variante arc. o region. di pavone.</translation>
+<phrase>...  portano un paon d'oro / Sovra un piatto d'argento ...</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>verdea</word>
+<pronunciation>[ver-dè-a]</pronunciation>
+<usage>s.f.</usage>
+<translation>Uva bianca, dolcissima</translation>
+<phrase>E' vin di verdèa</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>affisare</word>
+<usage>[af-fi·sà-re] v.tr.</usage>
+<translation>Variante arc. e poet. di affissare = guardare intensamente</translation>
+<phrase>Oliba affisa l'occhio - sovra il coltel del Duca.</phrase>
+<rchecks>5</rchecks>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>cioncare</word>
+<usage>[cion-cà-re] v.tr. e intr. (ciónco, ciónchi, ecc.; aus. avere), region.</usage>
+<translation>Bere con avidità o smodatamente, tracannare.</translation>
+<phrase>Voglio bestemmie ed orgie! - Vo' che si cionchi e rida!</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>agape</word>
+<pronunciation>[à·ga·pe]</pronunciation>
+<usage>s.f.</usage>
+<translation>Convito fraterno presso i primi cristiani; estens. Banchetto rituale; lett. Affetto, amore</translation>
+<phrase>Era santuario ed agape / La Tavola Rotonda</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>labe</word>
+<usage>[là-be] s.f., lett.</usage>
+<translation>Macchia, spec. morale.</translation>
+<phrase>Tale in un cerchio magico / Puro da immonda labe, / L'uomo crescea fortissimo /Colla vita nel cor.</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>ostensorio</word>
+<pronunciation>(o-sten-sò-rio)</pronunciation>
+<usage>s.m. (pl. -ri)</usage>
+<translation>Arredo sacro che serve ad esporre all'adorazione dei fedeli l'ostia consacrata.</translation>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>danda</word>
+<pronunciation>dàn-da</pronunciation>
+<usage>s.f.</usage>
+<translation>Ciascuna delle due striscie usate per sostenere i bambini quando cominciano a camminare (per lo piu` al pl.)</translation>
+<phrase>Certo e` che a valladolid salomone dovra` andarci con le sue zampe, del resto ha delle buone dande.</phrase>
+<wchecks>7</wchecks>
+</entry>
+
+<entry>
+<word>cornac</word>
+<pronunciation>còr-nac</pronunciation>
+<usage>s.m. (invar.)</usage>
+<translation>In India, conducente e custode di elefanti impliegati per uso domestico.</translation>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>piassava</word>
+<pronunciation>pias-sà-va</pronunciation>
+<usage>s.f.</usage>
+<translation>Fibra tessile che si ricava dalle foglie di palma, usata per fare spazzole, scope e cavi per usi di marina.</translation>
+<phrase>L'uomo torno` con uno spazzolone di piassava dal lungo manico.</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>patena</word>
+<pronunciation>pa-tè-na</pronunciation>
+<usage>s.f.</usage>
+<translation>Piattello di metallo usato per coprire il calice e per contenere l'ostia.</translation>
+<phrase>Salomone avanza elegante e pulito come una patena.</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>cicciolo</word>
+<pronunciation>cìc-cio-lo</pronunciation>
+<usage>s.m.</usage>
+<translation>Residuo abbrustolito delle parti grasse del maiale, fuse per ricavarne lo strutto.</translation>
+<phrase>Fu necessario cercare un luogo meno castigato dal sole, prima che militari e civili si ritrovassero trasformati in ciccioli.</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>borborigmo</word>
+<pronunciation>bor-bo-rìg-mo</pronunciation>
+<usage>s.m.</usage>
+<translation>Gorgoglìo addominale dovuto a movimento dei gas nel contenuto liquido delle anse intestinali.</translation>
+<phrase>Si sentiva dentro tutto un subbuglio, dei borborigmi sordi negli intestini.</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>tra lusco e brusco</word>
+<translation>quando la luce e` incerta, come nel crepuscolo</translation>
+<phrase>Invece di arrivare tra il lusco e il brusco del pomeriggio, quasi sera, entrarono a trento al mezzodi'.</phrase>
+<rchecks>5</rchecks>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>festuca</word>
+<pronunciation>fe-stù-ca</pronunciation>
+<usage>s.f.</usage>
+<translation>fuscellino, pagliuzza</translation>
+<phrase>secco che pareva una festuca</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>fiocina</word>
+<pronunciation>fiò-ci-na</pronunciation>
+<usage>s.f.</usage>
+<translation>Arnese da pasca, affine all'arpone, la cui asta termina con uno o piu` dardi di ferro</translation>
+<phrase>Ma che possono gli orsi armati di lance, frecce e fiocine contro fucili, schioppi, cannoni e colubrine?</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>colubrina</word>
+<pronunciation>co-lu-brì-na</pronunciation>
+<usage>s.f.</usage>
+<translation>Antico pezzo d'artiglieria a canna lunga e sottile.</translation>
+<phrase>Ma che possono gli orsi armati di lance, fecce e fiocine contro fucili, schioppi, cannoni e colubrine?</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>diafano</word>
+<pronunciation>[dià-fa-no]</pronunciation>
+<usage>agg.</usage>
+<translation>Che si lascia attraversare dalla luce</translation>
+<phrase>Si erano fatti diafani, molli, pallidi, veli evanescenti!</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>mistrà</word>
+<pronunciation>[mi-strà]</pronunciation>
+<usage>s.m.inv.</usage>
+<translation>liquore d'anice</translation>
+<phrase>il Granduca, di solito avarissimo, fa distribuire ai soldati, per incoraggiarli, botti di vino, acquavite e mistrà</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>palischermo</word>
+<pronunciation>[pa-li-schér-mo]</pronunciation>
+<usage>s.m.</usage>
+<translation>MAR nelle tonnare, barcone posto sui lati lunghi della camera della morte</translation>
+<phrase>Ma per salvare la città Re Leonzio scese al mare coi suoi orsi più bravi e salì a bordo di un palischermo per combattere il mostro.</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>crapula</word>
+<pronunciation>[crà-pu-la]</pronunciation>
+<usage>s.f.</usage>
+<translation>lett. eccesso nel mangiare e nel bere</translation>
+<phrase>Gli orsi lasciano le ricchezze, le eleganze e le crapule per ritornare alle loro vecchie montagne.</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>prosseneta</word>
+<pronunciation>[pros-se-nè-ta]</pronunciation>
+<usage>s.m. (pl. -ti)</usage>
+<translation>lett. mediatore, sensale; mezzano, ruffiano</translation>
+<phrase>Ha organizzato un'orgia dopo l'altra, sguinzagliando i più accreditati prosseneti di Londra alla ricerca di prelibatezze esotiche.</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>elice</word>
+<pronunciation>[è-li-ce]</pronunciation>
+<usage>s.f.</usage>
+<translation>ciocciola; (in anatomia) la parte del padiglione che circonda l'orecchio a guisa di cornice</translation>
+<phrase>Sequestro e mutilazione, mediante taglio dell'elice dell'orecchio destro.</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>blesità</word>
+<pronunciation>[ble-i-tà]</pronunciation>
+<usage>s.f.</usage>
+<translation>Difetto di pronuncia consistente nella sostituzione, deformazione o soppressione di una o più consonanti (spec. l e s)</translation>
+<phrase>D'Azeglio: aristocratico bleso, pittore, scrittore, inesauribile tombeur de femmes.</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>gramaglia</word>
+<pronunciation>[gra-mà-glia]</pronunciation>
+<usage>s.f., lett.</usage>
+<translation>veste da lutto (per lo più al pl.)</translation>
+<phrase>Stroncato, ha scritto un cronista in gramaglie, dall'enciclopedica fatica... Così sarebbe morto Camillo Benso conte di Cavour.</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>ingrommare</word>
+<pronunciation>[in-grom-mà-re]</pronunciation>
+<usage>v.tr; v.intr.</usage>
+<translation>coprire di gromma; coprirsi di gromma</translation>
+<phrase>indossando un soprabito logoro col bavero ingrommato di antico sudore</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>gromma</word>
+<pronunciation>[gróm-ma]</pronunciation>
+<usage>s.f.</usage>
+<translation>sedimento lasciato dal vino sulle pareti delle botti; tartaro, gruma</translation>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>tregenda</word>
+<pronunciation>[tre-gèn-da]</pronunciation>
+<usage>s.f. (lett.)</usage>
+<translation>convegno notturno di diavoli, di anime dannate e di streghe</translation>
+<phrase>Non ricordo come si era terminata quella notte di tregenda, quando il sesso mi si era presentato nei suoi aspetti più tremendi.</phrase>
+<wchecks>6</wchecks>
+</entry>
+
+<entry>
+<word>lutulento</word>
+<pronunciation>[lu-tu-lèn-to]</pronunciation>
+<usage>agg. (lett.)</usage>
+<translation>pieno di loto, fangoso</translation>
+<phrase>Ricordo d'essermi mortalmente annoiato nel seguire questa lutulenta storia di due famiglie.</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>sottano</word>
+<pronunciation>[sot-tà-no]</pronunciation>
+<usage>s.m. (region.)</usage>
+<translation>In Abruzzo, Puglia e Calabria, tipo di abitazione popolare a livello stradale, di una o due stanze, equivalente al basso napoletano.</translation>
+<phrase>... nel sottano ammuffito del quartiere Castello di Cagliari ...</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>darsena</word>
+<pronunciation>[dàr-se-na]</pronunciation>
+<usage>s.f.</usage>
+<translation>Nei porti militari o mercantili, specchio d'acqua limitato da dighe e banchine, attrezzato per il ricovero di navi in avaria o in disuso.</translation>
+<phrase>L'avremmo mandato a fare una passeggiata sul lungomare, e ci saremmo inventati qualcosa da fargli comprare in un negozio vicino alla darsena.</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>ogivale</word>
+<pronunciation>[o-gi-và-le]</pronunciation>
+<usage>agg. (pl. -li)</usage>
+<translation>(arch) fatto a ogiva, a sesto acuto</translation>
+<phrase>... quella fiammella impareggiabile, non triangolare e nemmeno ogivale ...</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>ogiva</word>
+<pronunciation>[o-gì-va]</pronunciation>
+<usage>s.f. (arch)</usage>
+<translation>Ciascuna delle nervature in rilievo che s'incrociano diagonalmente nelle volte a crociera romaniche e gotiche.
+Arco, volta o ogiva, a sesto acuto.</translation>
+<wchecks>5</wchecks>
+</entry>
+
+<entry>
+<word>predace</word>
+<pronunciation>[pre-dà-ce]</pronunciation>
+<usage>agg. (pl. -ci) lett.</usage>
+<translation>Incline a predare, rapace</translation>
+<phrase>Alla delusione fece però seguito una rabbia che definirei predace.</phrase>
+<wchecks>5</wchecks>
+</entry>
+
+</dictionary>

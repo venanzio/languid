@@ -1,0 +1,14 @@
+# Emacs backups
+*~
+
+# Haskell executables
+*.hi
+*.o
+
+# Backup dictionaries
+*.dic.bak
+
+# cabal stuff
+*.save0
+
+
