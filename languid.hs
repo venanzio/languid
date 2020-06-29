@@ -7,7 +7,10 @@ import Data.GI.Base
 import qualified Data.Text as Text
 import System.Environment
 
-import LanguageDictionary
+import Dictionary
+import Parser
+import WriteDictionary
+import LookUp
 import EasyWidgets
 
 -- A data structure containing all the widgets needed by languid
