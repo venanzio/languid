@@ -8,11 +8,12 @@ import qualified Data.Text as Text
 import System.Environment
 
 import LanguageDictionary
+import EasyWidgets
 
 -- A data structure containing all the widgets needed by languid
 data LangWin = LangWin {
-    lwWord :: Gtk.EntryBuffer
-  , lwTranslation :: Gtk.EntryBuffer
+    lwWord :: Gtk.Entry
+  , lwTranslation :: Gtk.Entry
   }
 
 {-
@@ -46,31 +47,28 @@ data LanguageGUI = LanguageGUI {
 newLangWin :: IO (Gtk.Grid, LangWin)
 newLangWin = do
   wordEntry <- new Gtk.Entry [ #text := "word" ]
-  wordBuff <- Gtk.entryGetBuffer wordEntry
-  
   transEntry <- new Gtk.Entry [ #text := "translation" ]
-  transBuff <- Gtk.entryGetBuffer transEntry
 
   -- putting all the widgets on a grid
   grid <- new Gtk.Grid [ #orientation := Gtk.OrientationHorizontal ]
   Gtk.gridAttach grid wordEntry  1 1 1 1
   Gtk.gridAttach grid transEntry 1 2 1 2
 
-  return (grid, LangWin { lwWord = wordBuff, lwTranslation = transBuff })
+  return (grid, LangWin { lwWord = wordEntry, lwTranslation = transEntry })
 
 -- delete all content in a LangWin structure
 clearLW :: LangWin -> IO ()
 clearLW lw = do
-  #deleteText (lwWord lw) 0 (-1)
-  #deleteText (lwTranslation lw) 0 (-1)
+  clearEntry (lwWord lw)
+  clearEntry (lwTranslation lw)
   return ()  
 
 -- puts an entry into a LangWin structure (displaying all the fields)
 displayEntry :: LangWin -> DEntry -> IO ()
 displayEntry lw entry = do
   clearLW lw
-  #insertText (lwWord lw) 0 (Text.pack (getWord entry)) (-1)
-  #insertText (lwTranslation lw) 0 (Text.pack (translation entry)) (-1)
+  writeEntry (lwWord lw) (getWord entry)
+  writeEntry (lwTranslation lw) (translation entry)
   return ()
 
 -- Look up
@@ -87,13 +85,12 @@ dictGUI dic = do
 
   searchButton <- new Gtk.Button [ #label := "look-up" ]
   on searchButton #clicked (do
-    wText <- #getText searchEntry
-    let word = Text.unpack wText
+    word <- readEntry searchEntry
     let luWord = dicLookup word dic
     case luWord of
       Nothing -> do
         clearLW lw
-        #insertText (lwWord lw) 0 (Text.pack "not in dictionary") (-1)
+        writeEntry (lwWord lw) "not in dictionary"
         return ()
       Just entry -> displayEntry lw entry
     )
