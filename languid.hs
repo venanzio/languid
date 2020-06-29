@@ -16,7 +16,9 @@ import EasyWidgets
 -- A data structure containing all the widgets needed by languid
 data LangWin = LangWin {
     lwWord :: Gtk.Entry
+  , lwPronunciation :: Gtk.Entry
   , lwTranslation :: Gtk.Entry
+  , lwUsage :: Gtk.TextView
   }
 
 {-
@@ -50,14 +52,22 @@ data LanguageGUI = LanguageGUI {
 newLangWin :: IO (Gtk.Grid, LangWin)
 newLangWin = do
   wordEntry <- new Gtk.Entry [ #text := "word" ]
+  pronEntry <- new Gtk.Entry [ #text := "pronunciation" ]
   transEntry <- new Gtk.Entry [ #text := "translation" ]
-
+  usageText <- new Gtk.TextView [ ]
+  writeVText usageText "grammar and usage"
+  
   -- putting all the widgets on a grid
   grid <- new Gtk.Grid [ #orientation := Gtk.OrientationHorizontal ]
   Gtk.gridAttach grid wordEntry  1 1 1 1
+  Gtk.gridAttach grid pronEntry  2 1 2 1
   Gtk.gridAttach grid transEntry 1 2 1 2
+  Gtk.gridAttach grid usageText 1 4 2 5
 
-  return (grid, LangWin { lwWord = wordEntry, lwTranslation = transEntry })
+  return (grid, LangWin { lwWord = wordEntry
+                        , lwPronunciation = pronEntry
+                        , lwTranslation = transEntry
+                        , lwUsage = usageText })
 
 -- delete all content in a LangWin structure
 clearLW :: LangWin -> IO ()

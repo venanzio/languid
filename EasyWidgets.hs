@@ -47,3 +47,17 @@ getBText buff = do
     (start,end) <- Gtk.textBufferGetBounds buff
     s <- Gtk.textBufferGetText buff start end False
     return (Text.unpack s)
+
+getVText :: Gtk.TextView -> IO String
+getVText tv = do
+  buff <- get tv #buffer
+  getBText buff
+    
+writeBText :: Gtk.TextBuffer -> String -> IO ()
+writeBText buff s =
+  set buff [ #text := Text.pack s ]
+
+writeVText :: Gtk.TextView -> String -> IO ()
+writeVText tv s = do
+  buff <- get tv #buffer
+  writeBText buff s
