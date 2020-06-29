@@ -58,16 +58,53 @@ newLangWin = do
 
   return (grid, LangWin { lwWord = wordBuff, lwTranslation = transBuff })
 
+-- delete all content in a LangWin structure
+clearLW :: LangWin -> IO ()
+clearLW lw = do
+  #deleteText (lwWord lw) 0 (-1)
+  #deleteText (lwTranslation lw) 0 (-1)
+  return ()  
 
+-- puts an entry into a LangWin structure (displaying all the fields)
+displayEntry :: LangWin -> DEntry -> IO ()
+displayEntry lw entry = do
+  clearLW lw
+  #insertText (lwWord lw) 0 (Text.pack (getWord entry)) (-1)
+  #insertText (lwTranslation lw) 0 (Text.pack (translation entry)) (-1)
+  return ()
+
+-- Look up
 dictGUI :: Dictionary -> IO Dictionary
 dictGUI dic = do
   Gtk.init Nothing 
 
-  win <- new Gtk.Window [ #title := "Hi there" ]
+  (lwWidget, lw) <- newLangWin
+
+  win <- new Gtk.Window [ #title := "Dictionary Look-up" ]
   on win #destroy Gtk.mainQuit
 
-  (lwWidget, lw) <- newLangWin
-  #add win lwWidget
+  searchEntry <- new Gtk.Entry [ #text := "search word" ]
+
+  searchButton <- new Gtk.Button [ #label := "look-up" ]
+  on searchButton #clicked (do
+    wText <- #getText searchEntry
+    let word = Text.unpack wText
+    let luWord = dicLookup word dic
+    case luWord of
+      Nothing -> do
+        clearLW lw
+        #insertText (lwWord lw) 0 (Text.pack "not in dictionary") (-1)
+        return ()
+      Just entry -> displayEntry lw entry
+    )
+
+  box <- new Gtk.Box [ #orientation := Gtk.OrientationVertical ]
+
+  #add box searchEntry
+  #add box searchButton
+  #add box lwWidget
+
+  #add win box
 
   #showAll win
 
