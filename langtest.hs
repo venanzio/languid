@@ -1,6 +1,11 @@
--- Word training with a language dictionary
+-- Word training with a language dictionary - Text-base interface
 
-import LanguageDictionary
+import Dictionary
+import Parser
+import WriteDictionary
+import LookUp
+import Tests
+
 import Data.List
 import System.IO
 
