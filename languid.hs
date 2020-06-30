@@ -24,6 +24,8 @@ data LangWin = LangWin {
   , lwRChecks :: Gtk.SpinButton
   , lwWChecks :: Gtk.SpinButton  
   }
+  
+
 
 {-
 data LanguageGUI = LanguageGUI {
@@ -56,44 +58,38 @@ data LanguageGUI = LanguageGUI {
 newLangWin :: IO (Gtk.Box, LangWin)
 newLangWin = do
   wordEntry <- new Gtk.Entry [ #text := "word" ]
+
   pronEntry <- new Gtk.Entry [ #text := "pronunciation" ]
 
-  usageText <- new Gtk.TextView [ ]
-  writeVText usageText "grammar and usage"
-  
+  usageText <- simpleTextView "grammar and usage"
 
-  transText <- new Gtk.TextView [ ]
-  writeVText transText "translation"
+  transText <- simpleTextView "translation"
 
-  phraseText <- new Gtk.TextView [ ]
-  writeVText phraseText "example phrases"
+  phraseText <- simpleTextView "example phrases"
 
-  noteText <- new Gtk.TextView [ ]
-  writeVText noteText "note"
+  noteText <- simpleTextView "note"
 
   -- putting all widgets inside a box
   box <- new Gtk.Box [ #orientation := Gtk.OrientationVertical ]
+  #setSpacing box 10
+  #setMarginStart box 10
+  #setMarginEnd box 10
+  #setMarginTop box 10
+  #setMarginBottom box 10
+  
   #add box wordEntry
   #add box pronEntry
 
-  usageFrame <- new Gtk.Frame [ #label := "usage" ]
-  #setSizeRequest usageText 200 50
-  #add usageFrame usageText
+  usageFrame <- simpleFrameTV usageText "usage"
   #add box usageFrame
 
-  transFrame <- new Gtk.Frame [ #label := "translation" ]
-  #setSizeRequest transText 200 50
-  #add transFrame transText
+  transFrame <- simpleFrameTV transText "translation"
   #add box transFrame
 
-  phraseFrame <- new Gtk.Frame [ #label := "example phrases" ]
-  #setSizeRequest phraseText 200 50
-  #add phraseFrame phraseText
+  phraseFrame <- simpleFrameTV phraseText "example phrases"
   #add box phraseFrame
 
-  noteFrame <- new Gtk.Frame [ #label := "notes" ]
-  #setSizeRequest noteText 200 50
-  #add noteFrame noteText
+  noteFrame <- simpleFrameTV noteText "notes"
   #add box noteFrame
 
   rchecksButton <- simpleSB checksNum
@@ -123,11 +119,6 @@ clearLW lw = do
   clearVText (lwNote lw)
   setSimpleSB (lwRChecks lw) checksNum
   setSimpleSB (lwWChecks lw) checksNum
-{-
-do
-
-
--}
 
 -- puts an entry into a LangWin structure (displaying all the fields)
 displayEntry :: LangWin -> DEntry -> IO ()
@@ -150,6 +141,7 @@ dictGUI dic = do
   (lwWidget, lw) <- newLangWin
 
   win <- new Gtk.Window [ #title := "Dictionary Look-up" ]
+  #setDefaultSize win 400 (-1)
   on win #destroy Gtk.mainQuit
 
   searchEntry <- new Gtk.Entry [ #text := "search word" ]

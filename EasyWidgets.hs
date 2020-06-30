@@ -77,6 +77,19 @@ writeVText tv s = do
   buff <- get tv #buffer
   writeBText buff s
 
+-- Simple text display and input area, with initialization string
+
+simpleTextView :: String -> IO Gtk.TextView
+simpleTextView s = do 
+  tv <- new Gtk.TextView [ ]
+  writeVText tv s
+  #setLeftMargin tv 5
+  #setTopMargin tv 5
+  #setSizeRequest tv 100 50
+  #setWrapMode tv Gtk.WrapModeChar
+  return tv
+
+
 -- Simple positive Int-reading sping button (values in range 0-100)
 
 simpleSB :: Int -> IO Gtk.SpinButton
@@ -88,3 +101,11 @@ simpleSB n = do
 
 setSimpleSB :: Gtk.SpinButton -> Int -> IO ()
 setSimpleSB sb n = #setValue sb (fromIntegral n)
+
+-- simple frame around a text view
+
+simpleFrameTV :: Gtk.TextView -> String -> IO Gtk.Frame
+simpleFrameTV tv s = do
+  fr <- new Gtk.Frame [ #label := Text.pack s ]
+  #add fr tv
+  return fr
