@@ -97,7 +97,6 @@ newLangWin = do
   #add box noteFrame
 
   rchecksButton <- simpleSB checksNum
-  setSimpleSB rchecksButton 23
   #add box rchecksButton
 
   wchecksButton <- simpleSB checksNum
@@ -110,7 +109,7 @@ newLangWin = do
                        , lwPhrase = phraseText
                        , lwNote = noteText
                        , lwRChecks = rchecksButton
-                       , lwWChecks = rchecksButton
+                       , lwWChecks = wchecksButton
                        })
 
 -- delete all content in a LangWin structure
@@ -124,6 +123,11 @@ clearLW lw = do
   clearVText (lwNote lw)
   setSimpleSB (lwRChecks lw) checksNum
   setSimpleSB (lwWChecks lw) checksNum
+{-
+do
+
+
+-}
 
 -- puts an entry into a LangWin structure (displaying all the fields)
 displayEntry :: LangWin -> DEntry -> IO ()
@@ -135,7 +139,7 @@ displayEntry lw entry = do
   writeVText (lwTranslation lw)   (deTranslation entry)
   writeVText (lwPhrase lw)        (dePhrase entry)
   writeVText (lwNote lw)          (deNote entry)
-  setSimpleSB (lwRChecks lw)      57 -- (deRChecks entry)
+  setSimpleSB (lwRChecks lw)      (deRChecks entry)
   setSimpleSB (lwWChecks lw)      (deWChecks entry)
 
 -- Look Up
