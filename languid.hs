@@ -51,13 +51,14 @@ data LanguageGUI = LanguageGUI {
 -}
   
 -- Creates a new LangWin, puts it inside a grid and returns both
-newLangWin :: IO (Gtk.Grid, LangWin)
+newLangWin :: IO (Gtk.Box, LangWin)
 newLangWin = do
   wordEntry <- new Gtk.Entry [ #text := "word" ]
   pronEntry <- new Gtk.Entry [ #text := "pronunciation" ]
 
   usageText <- new Gtk.TextView [ ]
   writeVText usageText "grammar and usage"
+  
 
   transText <- new Gtk.TextView [ ]
   writeVText transText "translation"
@@ -67,7 +68,33 @@ newLangWin = do
 
   noteText <- new Gtk.TextView [ ]
   writeVText noteText "note"
-    
+
+  -- putting all widgets inside a box
+  box <- new Gtk.Box [ #orientation := Gtk.OrientationVertical ]
+  #add box wordEntry
+  #add box pronEntry
+
+  usageFrame <- new Gtk.Frame [ #label := "usage" ]
+  #setSizeRequest usageText 200 50
+  #add usageFrame usageText
+  #add box usageFrame
+
+  transFrame <- new Gtk.Frame [ #label := "translation" ]
+  #setSizeRequest transText 200 50
+  #add transFrame transText
+  #add box transFrame
+
+  phraseFrame <- new Gtk.Frame [ #label := "example phrases" ]
+  #setSizeRequest phraseText 200 50
+  #add phraseFrame phraseText
+  #add box phraseFrame
+
+  noteFrame <- new Gtk.Frame [ #label := "notes" ]
+  #setSizeRequest noteText 200 50
+  #add noteFrame noteText
+  #add box noteFrame
+
+{-
   -- putting all the widgets on a grid
   grid <- new Gtk.Grid [ #orientation := Gtk.OrientationHorizontal ]
   Gtk.gridAttach grid wordEntry  1 1 1 1
@@ -76,14 +103,15 @@ newLangWin = do
   Gtk.gridAttach grid usageText  1 4 2 5
   Gtk.gridAttach grid phraseText 1 6 2 7
   Gtk.gridAttach grid noteText   1 8 2 9
+-}
 
-  return (grid, LangWin { lwWord = wordEntry
-                        , lwPronunciation = pronEntry
-                        , lwTranslation = transText
-                        , lwUsage = usageText
-                        , lwPhrase = phraseText
-                        , lwNote = noteText
-                        })
+  return (box, LangWin { lwWord = wordEntry
+                       , lwPronunciation = pronEntry
+                       , lwTranslation = transText
+                       , lwUsage = usageText
+                       , lwPhrase = phraseText
+                       , lwNote = noteText
+                       })
 
 -- delete all content in a LangWin structure
 clearLW :: LangWin -> IO ()
@@ -100,7 +128,7 @@ displayEntry lw entry = do
   writeVText (lwTranslation lw) (translation entry)
   return ()
 
--- Look up
+-- Look Up
 dictGUI :: Dictionary -> IO Dictionary
 dictGUI dic = do
   Gtk.init Nothing 
