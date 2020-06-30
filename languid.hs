@@ -94,17 +94,6 @@ newLangWin = do
   #add noteFrame noteText
   #add box noteFrame
 
-{-
-  -- putting all the widgets on a grid
-  grid <- new Gtk.Grid [ #orientation := Gtk.OrientationHorizontal ]
-  Gtk.gridAttach grid wordEntry  1 1 1 1
-  Gtk.gridAttach grid pronEntry  2 1 2 1
-  Gtk.gridAttach grid transText  1 2 2 3
-  Gtk.gridAttach grid usageText  1 4 2 5
-  Gtk.gridAttach grid phraseText 1 6 2 7
-  Gtk.gridAttach grid noteText   1 8 2 9
--}
-
   return (box, LangWin { lwWord = wordEntry
                        , lwPronunciation = pronEntry
                        , lwTranslation = transText
@@ -124,9 +113,12 @@ clearLW lw = do
 displayEntry :: LangWin -> DEntry -> IO ()
 displayEntry lw entry = do
   clearLW lw
-  writeEntry (lwWord lw) (getWord entry)
-  writeVText (lwTranslation lw) (translation entry)
-  return ()
+  writeEntry (lwWord lw) (deWord entry)
+  writeEntry (lwPronunciation lw) (dePronunciation entry)
+  writeVText (lwUsage lw) (deUsage entry)
+  writeVText (lwTranslation lw) (deTranslation entry)
+  writeVText (lwPhrase lw) (dePhrase entry)
+  writeVText (lwNote lw) (deNote entry)
 
 -- Look Up
 dictGUI :: Dictionary -> IO Dictionary

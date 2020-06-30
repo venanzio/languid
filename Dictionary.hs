@@ -43,6 +43,50 @@ deWord (DEntry w _) = w
 
 getWord = deWord  -- for compatibility with older version
 
+dePronunciation :: DEntry -> String
+dePronunciation (DEntry _ l) = findPronunciation l
+  where findPronunciation (Pronunciation p : efs) = p
+        findPronunciation (_ : efs) = findPronunciation efs
+        findPronunciation [] = ""
+
+pronunciation = dePronunciation  -- for compatibility
+
+deUsage :: DEntry -> String
+deUsage (DEntry _ l) = findUsage l
+  where findUsage (Usage u : efs) = u
+        findUsage (_ : efs) = findUsage efs
+        findUsage [] = ""
+
+usage = deUsage -- for compatibility
+
+deTranslation :: DEntry -> String
+deTranslation (DEntry _ l) = 
+  foldr (\field continue -> 
+          case field of Translation t -> t
+                        _ -> continue)
+        "" l  
+
+translation = deTranslation
+
+dePhrase :: DEntry -> String
+dePhrase (DEntry _ l) = foldl phraseapp "" l
+  where phraseapp acc (Phrase ph) = acc++ph
+        phraseapp acc _ = acc    
+
+phrases = dePhrase -- for compatibility
+
+deNote :: DEntry -> String
+deNote (DEntry _ l) = findNote l
+  where findNote (Note u : efs) = u
+        findNote (_ : efs) = findNote efs
+        findNote [] = ""
+
+note = deNote -- for compatibility
+
+
+
+
+
 deRChecks :: DEntry -> Int
 deRChecks (DEntry _ l) =
   foldr (\field continue -> 
@@ -64,35 +108,7 @@ writeChecks (DEntry _ l) =
                         _ -> continue)
         0 l
 
-translation :: DEntry -> String
-translation (DEntry _ l) = 
-  foldr (\field continue -> 
-          case field of Translation t -> t
-                        _ -> continue)
-        "" l  
 
-pronunciation :: DEntry -> String
-pronunciation (DEntry _ l) = findPronunciation l
-  where findPronunciation (Pronunciation p : efs) = p
-        findPronunciation (_ : efs) = findPronunciation efs
-        findPronunciation [] = ""
-
-usage :: DEntry -> String
-usage (DEntry _ l) = findUsage l
-  where findUsage (Usage u : efs) = u
-        findUsage (_ : efs) = findUsage efs
-        findUsage [] = ""
-
-phrases :: DEntry -> String
-phrases (DEntry _ l) = foldl phraseapp "" l
-  where phraseapp acc (Phrase ph) = acc++ph
-        phraseapp acc _ = acc    
-
-note :: DEntry -> String
-note (DEntry _ l) = findNote l
-  where findNote (Note u : efs) = u
-        findNote (_ : efs) = findNote efs
-        findNote [] = ""
 
 totalRChecks :: Dictionary -> Int
 totalRChecks [] = 0
