@@ -41,7 +41,22 @@ writeEntry e s = do
   clearEntryBuffer buff
   writeEntryBuffer buff s
 
+-- delete the content of a Text View
+
+clearTextBuffer :: Gtk.TextBuffer -> IO ()
+clearTextBuffer buff = do
+  (start,end) <- Gtk.textBufferGetBounds buff
+  #delete buff start end
+  return ()
+
+clearVText :: Gtk.TextView -> IO ()
+clearVText tv = do
+  buff <- get tv #buffer
+  clearTextBuffer buff
+
+
 -- get the whole text contained in a text buffer
+
 getBText :: Gtk.TextBuffer -> IO String
 getBText buff = do
     (start,end) <- Gtk.textBufferGetBounds buff

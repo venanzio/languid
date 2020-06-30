@@ -17,8 +17,10 @@ import EasyWidgets
 data LangWin = LangWin {
     lwWord :: Gtk.Entry
   , lwPronunciation :: Gtk.Entry
-  , lwTranslation :: Gtk.Entry
   , lwUsage :: Gtk.TextView
+  , lwTranslation :: Gtk.TextView
+  , lwPhrase :: Gtk.TextView
+  , lwNote :: Gtk.TextView
   }
 
 {-
@@ -53,27 +55,41 @@ newLangWin :: IO (Gtk.Grid, LangWin)
 newLangWin = do
   wordEntry <- new Gtk.Entry [ #text := "word" ]
   pronEntry <- new Gtk.Entry [ #text := "pronunciation" ]
-  transEntry <- new Gtk.Entry [ #text := "translation" ]
+
   usageText <- new Gtk.TextView [ ]
   writeVText usageText "grammar and usage"
-  
+
+  transText <- new Gtk.TextView [ ]
+  writeVText transText "translation"
+
+  phraseText <- new Gtk.TextView [ ]
+  writeVText phraseText "example phrases"
+
+  noteText <- new Gtk.TextView [ ]
+  writeVText noteText "note"
+    
   -- putting all the widgets on a grid
   grid <- new Gtk.Grid [ #orientation := Gtk.OrientationHorizontal ]
   Gtk.gridAttach grid wordEntry  1 1 1 1
   Gtk.gridAttach grid pronEntry  2 1 2 1
-  Gtk.gridAttach grid transEntry 1 2 1 2
-  Gtk.gridAttach grid usageText 1 4 2 5
+  Gtk.gridAttach grid transText  1 2 2 3
+  Gtk.gridAttach grid usageText  1 4 2 5
+  Gtk.gridAttach grid phraseText 1 6 2 7
+  Gtk.gridAttach grid noteText   1 8 2 9
 
   return (grid, LangWin { lwWord = wordEntry
                         , lwPronunciation = pronEntry
-                        , lwTranslation = transEntry
-                        , lwUsage = usageText })
+                        , lwTranslation = transText
+                        , lwUsage = usageText
+                        , lwPhrase = phraseText
+                        , lwNote = noteText
+                        })
 
 -- delete all content in a LangWin structure
 clearLW :: LangWin -> IO ()
 clearLW lw = do
   clearEntry (lwWord lw)
-  clearEntry (lwTranslation lw)
+  clearVText (lwTranslation lw)
   return ()  
 
 -- puts an entry into a LangWin structure (displaying all the fields)
@@ -81,7 +97,7 @@ displayEntry :: LangWin -> DEntry -> IO ()
 displayEntry lw entry = do
   clearLW lw
   writeEntry (lwWord lw) (getWord entry)
-  writeEntry (lwTranslation lw) (translation entry)
+  writeVText (lwTranslation lw) (translation entry)
   return ()
 
 -- Look up
