@@ -21,6 +21,8 @@ data LangWin = LangWin {
   , lwTranslation :: Gtk.TextView
   , lwPhrase :: Gtk.TextView
   , lwNote :: Gtk.TextView
+  , lwRChecks :: Gtk.SpinButton
+  , lwWChecks :: Gtk.SpinButton  
   }
 
 {-
@@ -94,31 +96,47 @@ newLangWin = do
   #add noteFrame noteText
   #add box noteFrame
 
+  rchecksButton <- simpleSB checksNum
+  setSimpleSB rchecksButton 23
+  #add box rchecksButton
+
+  wchecksButton <- simpleSB checksNum
+  #add box wchecksButton
+
   return (box, LangWin { lwWord = wordEntry
                        , lwPronunciation = pronEntry
                        , lwTranslation = transText
                        , lwUsage = usageText
                        , lwPhrase = phraseText
                        , lwNote = noteText
+                       , lwRChecks = rchecksButton
+                       , lwWChecks = rchecksButton
                        })
 
 -- delete all content in a LangWin structure
 clearLW :: LangWin -> IO ()
 clearLW lw = do
   clearEntry (lwWord lw)
+  clearEntry (lwPronunciation lw)
+  clearVText (lwUsage lw)
   clearVText (lwTranslation lw)
-  return ()  
+  clearVText (lwPhrase lw)
+  clearVText (lwNote lw)
+  setSimpleSB (lwRChecks lw) checksNum
+  setSimpleSB (lwWChecks lw) checksNum
 
 -- puts an entry into a LangWin structure (displaying all the fields)
 displayEntry :: LangWin -> DEntry -> IO ()
 displayEntry lw entry = do
   clearLW lw
-  writeEntry (lwWord lw) (deWord entry)
+  writeEntry (lwWord lw)          (deWord entry)
   writeEntry (lwPronunciation lw) (dePronunciation entry)
-  writeVText (lwUsage lw) (deUsage entry)
-  writeVText (lwTranslation lw) (deTranslation entry)
-  writeVText (lwPhrase lw) (dePhrase entry)
-  writeVText (lwNote lw) (deNote entry)
+  writeVText (lwUsage lw)         (deUsage entry)
+  writeVText (lwTranslation lw)   (deTranslation entry)
+  writeVText (lwPhrase lw)        (dePhrase entry)
+  writeVText (lwNote lw)          (deNote entry)
+  setSimpleSB (lwRChecks lw)      57 -- (deRChecks entry)
+  setSimpleSB (lwWChecks lw)      (deWChecks entry)
 
 -- Look Up
 dictGUI :: Dictionary -> IO Dictionary

@@ -83,10 +83,6 @@ deNote (DEntry _ l) = findNote l
 
 note = deNote -- for compatibility
 
-
-
-
-
 deRChecks :: DEntry -> Int
 deRChecks (DEntry _ l) =
   foldr (\field continue -> 
@@ -96,18 +92,19 @@ deRChecks (DEntry _ l) =
 
 readChecks = deRChecks -- for compatibility with older version
 
-
---------------------------------------------------------------------
-
-
-  
-writeChecks :: DEntry -> Int
-writeChecks (DEntry _ l) = 
+deWChecks :: DEntry -> Int
+deWChecks (DEntry _ l) = 
   foldr (\field continue -> 
           case field of WChecks n -> n
                         _ -> continue)
         0 l
 
+writeChecks = deWChecks  -- for compatibility with older version
+
+--------------------------------------------------------------------
+
+
+  
 
 
 totalRChecks :: Dictionary -> Int

@@ -76,3 +76,15 @@ writeVText :: Gtk.TextView -> String -> IO ()
 writeVText tv s = do
   buff <- get tv #buffer
   writeBText buff s
+
+-- Simple positive Int-reading sping button (values in range 0-100)
+
+simpleSB :: Int -> IO Gtk.SpinButton
+simpleSB n = do
+  spinB <- new Gtk.SpinButton [ ]
+  adjust <- Gtk.adjustmentNew (fromIntegral n) 0 100 1 5 10
+  Gtk.spinButtonConfigure spinB (Just adjust) 1 0
+  return spinB
+
+setSimpleSB :: Gtk.SpinButton -> Int -> IO ()
+setSimpleSB sb n = #setValue sb (fromIntegral n)
