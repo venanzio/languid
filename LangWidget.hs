@@ -97,15 +97,16 @@ newLangWidget = do
   wchecksButton <- simpleSB checksNum
   #add box wchecksButton
 
-  return (box, LangWidget { lwWord = wordEntry
-                       , lwPronunciation = pronEntry
-                       , lwTranslation = transText
-                       , lwUsage = usageText
-                       , lwPhrase = phraseText
-                       , lwNote = noteText
-                       , lwRChecks = rchecksButton
-                       , lwWChecks = wchecksButton
-                       })
+  return (box,
+          LangWidget { lwWord = wordEntry
+                     , lwPronunciation = pronEntry
+                     , lwTranslation = transText
+                     , lwUsage = usageText
+                     , lwPhrase = phraseText
+                     , lwNote = noteText
+                     , lwRChecks = rchecksButton
+                     , lwWChecks = wchecksButton
+                     })
 
 -- delete all content in a LangWidget structure
 clearLW :: LangWidget -> IO ()
