@@ -53,7 +53,7 @@ library
   exposed-modules:     Main
                      , Dictionary, Parser, WriteDictionary
                      , LookUp, Tests
-                     , EasyWidgets
+                     , EasyWidgets, LangWidget
 
   -- Modules included in this library but not exported.
   -- other-modules:
