@@ -15,8 +15,6 @@ import EasyWidgets
 import LangWidget
 import LookUpGUI
 
-
-
 main :: IO ()
 main = do
   args <- getArgs
@@ -27,6 +25,4 @@ main = do
   dic' <- lookUpGUI dic
 
   writeDictionary (dictFile++".dic") dic'
-
-
 

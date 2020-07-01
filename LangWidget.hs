@@ -132,8 +132,8 @@ clearLW lw = do
   setSimpleSB (lwWChecks lw) checksNum
 
 -- puts an entry into a LangWidget structure (displaying all the fields)
-displayEntry :: LangWidget -> DEntry -> IO ()
-displayEntry lw entry = do
+lwDisplayEntry :: LangWidget -> DEntry -> IO ()
+lwDisplayEntry lw entry = do
   clearLW lw
   writeEntry (lwWord lw)          (deWord entry)
   writeEntry (lwPronunciation lw) (dePronunciation entry)
@@ -144,3 +144,22 @@ displayEntry lw entry = do
   setSimpleSB (lwRChecks lw)      (deRChecks entry)
   setSimpleSB (lwWChecks lw)      (deWChecks entry)
 
+-- Read a dictionary entry from a LangWidget
+lwReadEntry :: LangWidget -> IO DEntry
+lwReadEntry lw = do
+  word <- readEntry (lwWord lw)
+  pronunciation <- readEntry (lwPronunciation lw)
+  usage <- readVText (lwUsage lw)
+  translation <- readVText (lwTranslation lw)
+  phrase <- readVText (lwPhrase lw)
+  note <- readVText (lwNote lw)
+  rchecks <- readSimpleSB (lwRChecks lw)
+  wchecks <- readSimpleSB (lwWChecks lw)
+  return (DEntry word [ Pronunciation pronunciation
+                      , Usage usage
+                      , Translation translation
+                      , Phrase phrase
+                      , Note note
+                      , RChecks rchecks
+                      , WChecks wchecks
+                      ])

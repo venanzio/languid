@@ -57,16 +57,16 @@ clearVText tv = do
 
 -- get the whole text contained in a text buffer
 
-getBText :: Gtk.TextBuffer -> IO String
-getBText buff = do
+readBText :: Gtk.TextBuffer -> IO String
+readBText buff = do
     (start,end) <- Gtk.textBufferGetBounds buff
     s <- Gtk.textBufferGetText buff start end False
     return (Text.unpack s)
 
-getVText :: Gtk.TextView -> IO String
-getVText tv = do
+readVText :: Gtk.TextView -> IO String
+readVText tv = do
   buff <- get tv #buffer
-  getBText buff
+  readBText buff
     
 writeBText :: Gtk.TextBuffer -> String -> IO ()
 writeBText buff s =
@@ -89,6 +89,13 @@ simpleTextView s = do
   #setWrapMode tv Gtk.WrapModeChar
   return tv
 
+-- simple frame around a text view
+
+simpleFrameTV :: Gtk.TextView -> String -> IO Gtk.Frame
+simpleFrameTV tv s = do
+  fr <- new Gtk.Frame [ #label := Text.pack s ]
+  #add fr tv
+  return fr
 
 -- Simple positive Int-reading sping button (values in range 0-100)
 
@@ -102,10 +109,7 @@ simpleSB n = do
 setSimpleSB :: Gtk.SpinButton -> Int -> IO ()
 setSimpleSB sb n = #setValue sb (fromIntegral n)
 
--- simple frame around a text view
-
-simpleFrameTV :: Gtk.TextView -> String -> IO Gtk.Frame
-simpleFrameTV tv s = do
-  fr <- new Gtk.Frame [ #label := Text.pack s ]
-  #add fr tv
-  return fr
+readSimpleSB :: Gtk.SpinButton -> IO Int
+readSimpleSB sb = do
+  x <- #getValueAsInt sb
+  return (fromIntegral x)
