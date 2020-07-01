@@ -26,8 +26,9 @@ data LookUpWidget = LookUpWidget {
 
 newLUW :: Dictionary -> LangWidget -> IO (Gtk.Box, LookUpWidget)
 newLUW dic lw = do
+  msgLabel <- new Gtk.Label [ #label := "enter a word to search" ]
+  
   searchEntry <- new Gtk.Entry [ #text := "search word" ]
-  #setHasFrame searchEntry True
 
   searchButton <- new Gtk.Button [ #label := "look-up" ]
   on searchButton #clicked (do
@@ -35,10 +36,11 @@ newLUW dic lw = do
     let luWord = dicLookup word dic
     case luWord of
       Nothing -> do
+        set msgLabel [ #label := "not in dictionary"]
         clearLW lw
-        writeEntry (luMessage lw) "not in dictionary"
-        return ()
-      Just entry -> displayEntry lw entry
+      Just entry -> do
+        set msgLabel [ #label := "found in dictionary"]
+        displayEntry lw entry
     )
 
   searchBox <- new Gtk.Box [ #orientation := Gtk.OrientationHorizontal ] 
@@ -51,10 +53,10 @@ newLUW dic lw = do
   #add searchBox searchEntry
   #add searchBox searchButton
 
-  msgLabel <- new Gtk.Label [ #label := "enter a word to search" ]
 
   luBox <- new Gtk.Box [ #orientation := Gtk.OrientationVertical ]
   #setSpacing luBox 10
+  #setMarginTop luBox 10
   #add luBox msgLabel
   #add luBox searchBox
 
@@ -75,7 +77,7 @@ lookUpGUI dic = do
   (luWidget, lu) <- newLUW dic lw
 
   win <- new Gtk.Window [ #title := "Dictionary Look-up" ]
---  #setDefaultSize win 400 (-1)
+  #setDefaultSize win 400 (-1)
   on win #destroy Gtk.mainQuit
 
   sep <- new Gtk.Separator [ #orientation := Gtk.OrientationHorizontal ]

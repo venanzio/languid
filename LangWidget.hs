@@ -91,11 +91,22 @@ newLangWidget = do
   noteFrame <- simpleFrameTV noteText "notes"
   #add box noteFrame
 
+  rchecksBox <- new Gtk.Box [ #orientation := Gtk.OrientationHorizontal ]
+  #setSpacing rchecksBox 10
+  rchecksLabel <- new Gtk.Label [ #label := "read checks: " ]
   rchecksButton <- simpleSB checksNum
-  #add box rchecksButton
+  #add rchecksBox rchecksLabel
+  #add rchecksBox rchecksButton
 
+  wchecksBox <- new Gtk.Box [ #orientation := Gtk.OrientationHorizontal ]
+  #setSpacing wchecksBox 10
+  wchecksLabel <- new Gtk.Label [ #label := "write checks:" ]
   wchecksButton <- simpleSB checksNum
-  #add box wchecksButton
+  #add wchecksBox wchecksLabel
+  #add wchecksBox wchecksButton
+
+  #add box rchecksBox 
+  #add box wchecksBox 
 
   return (box,
           LangWidget { lwWord = wordEntry
