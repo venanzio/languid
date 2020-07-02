@@ -22,7 +22,20 @@ main = do
   dic <- readDictionary (dictFile++".dic")
   writeDictionary (dictFile++".dic.bak") dic  -- back up
 
+  showStats dic
+
   dic' <- lookUpGUI dic
 
+  showStats dic'
+
   writeDictionary (dictFile++".dic") dic'
+
+
+showStats dic = do
+  putStrLn("\nWords in the dictionary : " ++ show (length dic))
+  putStrLn ("\nRead training words  : " ++ show (totalRWords dic))
+  putStrLn ("Total read checks    : " ++ show (totalRChecks dic))
+  putStrLn ("\nWrite training words : " ++ show (totalWWords dic))
+  putStrLn ("Total read checks    : " ++ show (totalWChecks dic))
+
 

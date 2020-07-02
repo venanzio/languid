@@ -162,7 +162,7 @@ Alternant au gré des rythmes entre la grâce d'un cygne et la vivacité d'un ra
 <usage>vtr</usage>
 <translation>amuse, brighten up, cheer up</translation>
 <phrase>Ce spectacle nous a égayés toute l'après-midi.</phrase>
-<rchecks>5</rchecks>
+<rchecks>4</rchecks>
 </entry>
 
 <entry>
@@ -332,7 +332,7 @@ attendez-moi, ne bougez pas d'une semelle</phrase>
 <usage>vtr</usage>
 <translation>twiddle</translation>
 <phrase>...  m'avait-elle supplié en tripotant nerveusement son long collier de perles</phrase>
-<wchecks>10</wchecks>
+<wchecks>9</wchecks>
 </entry>
 
 <entry>
@@ -447,7 +447,7 @@ un terrain plein de bosses
 <translation>crazy, screwy, nuts; loony, screwball</translation>
 <phrase>Elle répondit à ma mère en hurlant qu'on était une famille de cinglés.</phrase>
 <note>(f cinglée)</note>
-<wchecks>5</wchecks>
+<wchecks>6</wchecks>
 </entry>
 
 <entry>
@@ -458,7 +458,7 @@ un terrain plein de bosses
 <phrase>prendre un air ébahi 
 = to look flabbergasted, stunned</phrase>
 <note>(f ébahie)</note>
-<wchecks>7</wchecks>
+<wchecks>8</wchecks>
 </entry>
 
 <entry>
@@ -489,7 +489,7 @@ un terrain plein de bosses
 un musicien raté
 = a failed musician</phrase>
 <note>(f ratée)</note>
-<wchecks>3</wchecks>
+<wchecks>4</wchecks>
 </entry>
 
 <entry>
@@ -539,7 +539,7 @@ se déguiser en courant d'air
 <usage>nf</usage>
 <translation>bath, bathtub</translation>
 <phrase>Il remplissait la baignoire, enlevait des litres, avec une bouteille.</phrase>
-<wchecks>9</wchecks>
+<wchecks>8</wchecks>
 </entry>
 
 <entry>
@@ -776,7 +776,7 @@ En reculant sur le palier, le monsieur des impôtes cria: " ... "</phrase>
 <translation>mail, letters, post</translation>
 <phrase>il y a du courrier pour moi aujourd'hui?
 = are there any letters for me today?</phrase>
-<wchecks>8</wchecks>
+<wchecks>7</wchecks>
 </entry>
 
 <entry>
@@ -786,7 +786,7 @@ En reculant sur le palier, le monsieur des impôtes cria: " ... "</phrase>
 <translation>prison, penal colony</translation>
 <phrase>c'est le bagne, ici!
 = they work you to death in this place!</phrase>
-<wchecks>4</wchecks>
+<wchecks>3</wchecks>
 </entry>
 
 <entry>
@@ -890,7 +890,7 @@ Il accepta finalement de me laisser passer, en hurlant, pour que je lâche son p
 <translation>daub with paint; make (oneself) up</translation>
 <phrase>elle s'était peinturluré le visage
 = she'd plastered make-up on her face</phrase>
-<wchecks>4</wchecks>
+<wchecks>5</wchecks>
 </entry>
 
 <entry>
@@ -1019,8 +1019,8 @@ Un après-midi, à notre arrivée, nous l'avions trouvée en grande conversation
 <usage>vt</usage>
 <translation>crumple, crease (up)</translation>
 <phrase>avoir un visage tout fripé = to have crease-marks all over one's face</phrase>
+<wchecks>8</wchecks>
 <rchecks>5</rchecks>
-<wchecks>9</wchecks>
 </entry>
 
 <entry>
@@ -1050,7 +1050,7 @@ Je suis la reine des fous, apportez-moi une passoire ou un entonnoir.</phrase>
 <usage>nm</usage>
 <translation>funnel</translation>
 <phrase>Je suis la reine des fous, apportez-moi une passoire ou un entonnoir.</phrase>
-<wchecks>7</wchecks>
+<wchecks>6</wchecks>
 </entry>
 
 <entry>
@@ -1061,7 +1061,7 @@ Je suis la reine des fous, apportez-moi une passoire ou un entonnoir.</phrase>
 <phrase>sa chambre est un vrai foutoir
 = her room is a complete dump
 La chambre de Maman s'était transformée en musée miniature et en foutoir géant.</phrase>
-<wchecks>7</wchecks>
+<wchecks>6</wchecks>
 </entry>
 
 <entry>
@@ -1081,7 +1081,7 @@ La chambre de Maman s'était transformée en musée miniature et en foutoir géa
 <translation>ground floor (UK), first floor (US)</translation>
 <phrase>habiter un rez-de-chaussée
 = to live in a ground-floor flat</phrase>
-<wchecks>5</wchecks>
+<wchecks>6</wchecks>
 </entry>
 
 <entry>
@@ -1131,7 +1131,7 @@ La chambre de Maman s'était transformée en musée miniature et en foutoir géa
 C'est pile-poil ce que je cherchais
 = That's exactly what I was looking for
 Il y a pile poil quatre ans maintenant, Maman a été kidnappée.</phrase>
-<wchecks>3</wchecks>
+<wchecks>4</wchecks>
 </entry>
 
 <entry>
@@ -1181,7 +1181,7 @@ on en avait marre de venir à la clinique tous les jours</phrase>
 <usage>nf</usage>
 <translation>phial</translation>
 <phrase>Elle avait volé une fiole de son sang lors de ses derniers examens.</phrase>
-<wchecks>8</wchecks>
+<wchecks>7</wchecks>
 </entry>
 
 <entry>
@@ -1221,7 +1221,7 @@ on en avait marre de venir à la clinique tous les jours</phrase>
 <phrase>Ces étudiants sont largués en mathématiques.
 = These students are out of their depth in maths.</phrase>
 <note>f larguée</note>
-<rchecks>8</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -1428,7 +1428,7 @@ le public a boudé son film
 = we're not getting anywhere, let's make up our minds
 Alors le flic réspondait, toujours embarassé, que l'enquête piétinait mais qu'ils continuaient chercher.</phrase>
 <rchecks>7</rchecks>
-<wchecks>2</wchecks>
+<wchecks>4</wchecks>
 </entry>
 
 <entry>
@@ -1447,7 +1447,7 @@ Elle plongeait des rochers puis elle faisait la planche en regardante le soleil 
 <usage>nf</usage>
 <translation>beehive</translation>
 <phrase>un énorme petit-déjeuner, avec du jus d'oranges cuellies dans les arbres du jardin et du miel qui venait des ruches du voisin.</phrase>
-<wchecks>7</wchecks>
+<wchecks>6</wchecks>
 </entry>
 
 <entry>
@@ -1456,7 +1456,7 @@ Elle plongeait des rochers puis elle faisait la planche en regardante le soleil 
 <usage>nm</usage>
 <translation>pebble</translation>
 <phrase>sur les galets = on the shingle</phrase>
-<wchecks>7</wchecks>
+<wchecks>6</wchecks>
 </entry>
 
 <entry>
@@ -1573,7 +1573,7 @@ Distinguer en soi ce qui relève du désir adéquat ou pas est un exercice très
 <usage>nf</usage>
 <translation>doe, hind</translation>
 <phrase>ma biche = my darling</phrase>
-<rchecks>6</rchecks>
+<rchecks>5</rchecks>
 </entry>
 
 <entry>
@@ -1592,7 +1592,7 @@ Distinguer en soi ce qui relève du désir adéquat ou pas est un exercice très
 <translation>stagnate, grow foul</translation>
 <phrase>je ne vais pas croupir ici toute ma vie
 = I'm not going to rot here all my life</phrase>
-<rchecks>11</rchecks>
+<rchecks>10</rchecks>
 </entry>
 
 <entry>
@@ -1729,7 +1729,7 @@ Une confiance qui s'ancrait dans toutes les sources d'aide, d'amour, d'affection
 <usage>vt; v pron</usage>
 <translation>glimpse, catch sight of, notice; notice, become aware (de = of), realize</translation>
 <phrase>On s'apercevrait peu à peu que cette gratitude devrait englober la terre entière.</phrase>
-<wchecks>6</wchecks>
+<wchecks>5</wchecks>
 </entry>
 
 <entry>
@@ -1814,7 +1814,7 @@ on pourrait formuler le diagnostic du Buddha en disant que "tout grince"</phrase
 <translation>rate, level</translation>
 <phrase>au fur et à mesure = gradually, as we go along, bit by bit
 les émotions qui nous perturbaient auparavant se dissolvent au fur et à mesure qu'elles apparaissent</phrase>
-<rchecks>6</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -1905,7 +1905,7 @@ La pratique régulière de la pleine conscience débouche sur une meilleure rég
 <usage>nm</usage>
 <translation>cashew (nut)</translation>
 <phrase>tout bêtement, j'adore les noix de cajou, en manger me donne des aphtes, donc, j'en mange quand même!</phrase>
-<rchecks>8</rchecks>
+<rchecks>5</rchecks>
 </entry>
 
 <entry>
@@ -2009,7 +2009,7 @@ Deux d'entre eux, au centre, supportaient une bière recouverte de son couvercle
 <usage>nm</usage>
 <translation>hearse</translation>
 <phrase>Ici on n'a pas le temps, on ne s'est pas fait à l'idée que déjà il faut courir derrière le corbillard.</phrase>
-<rchecks>8</rchecks>
+<wchecks>1</wchecks>
 </entry>
 
 <entry>
@@ -2178,7 +2178,7 @@ La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, da
 <usage>nf</usage>
 <translation>laziness, idleness, indolence</translation>
 <phrase>Mais tout cela, au fond, n'avait pas grande utilité et j'y ai renoncé par paresse.</phrase>
-<rchecks>5</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -2225,8 +2225,9 @@ La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, da
 <translation>ceiling</translation>
 <phrase>Le lustre est suspendu au plafond = The light is suspended from the ceiling
 </phrase>
+
+
 <wchecks>4</wchecks>
-<rchecks>4</rchecks>
 </entry>
 
 <entry>
@@ -2245,8 +2246,8 @@ La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, da
 <translation>primrose</translation>
 <phrase>Les primevères sont les premières fleurs à fleurir après l'hiver.</phrase>
 <note>petite plante fleurissant tôt</note>
+<wchecks>5</wchecks>
 <rchecks>9</rchecks>
-<wchecks>6</wchecks>
 </entry>
 
 </dictionary>

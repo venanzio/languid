@@ -95,6 +95,7 @@ newLUW dictionary = do
   on changeButton #clicked (do
     entry <- lwReadEntry lw
     modifyIORef dicRef (\dic -> updateDictionary dic entry)
+    set msgLabel [ #label := "entry modified" ]
     )
 
   -- layout
@@ -196,7 +197,7 @@ nextRTAction lw lu = do
   setSimpleSB (lwRChecks lw) (deRChecks e)
   setSimpleSB (lwWChecks lw) (deWChecks e)
 
-  set (luwMessage lu) [ #label := "Guess the translation" ]
+  set (luwMessage lu) [ #label := "guess the translation" ]
 
   set (luwSubmit lu) [ #label := "submit" ]
 
