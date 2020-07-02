@@ -21,7 +21,8 @@ data LanguageMode = LookUp | ReadTest | WriteTest
 
 data LookUpWidget = LookUpWidget {
     luwDictionary :: IORef Dictionary
-  , luwMode :: LanguageMode
+  , luwMode :: IORef LanguageMode
+  , luwChangeMode :: Gtk.Button
   , luwMessage :: Gtk.Label
   , luwInput :: Gtk.Entry
   , luwSubmit :: Gtk.Button
@@ -34,8 +35,10 @@ newLUW dictionary = do
   
   dicRef <- newIORef dictionary
 
-  let mode = LookUp  -- TO DO: add a radio button to choose the mode
+  modeRef <- newIORef LookUp
 
+  chModeButton <- new Gtk.Button [ #label := "mode: look-up" ]
+  
   msgLabel <- new Gtk.Label [ #label := "enter a word to search" ]
   
   searchEntry <- new Gtk.Entry [ #text := "search word" ]
@@ -44,19 +47,25 @@ newLUW dictionary = do
 
   changeButton <- new Gtk.Button [ #label := "Enter/Modify Entry in Dictionary" ]
 
+  let lu = LookUpWidget { luwDictionary = dicRef
+                        , luwMode = modeRef
+                        , luwChangeMode = chModeButton
+                        , luwMessage = msgLabel
+                        , luwInput = searchEntry
+                        , luwSubmit = searchButton
+                        , luwChange = changeButton
+                        }
 
-  on searchButton #clicked (do
-    dic <- readIORef dicRef
-    word <- readEntry searchEntry
-    let luWord = dicLookup word dic
-    case luWord of
-      Nothing -> do
-        set msgLabel [ #label := "not in dictionary"]
-        clearLW lw
-      Just entry -> do
-        set msgLabel [ #label := "found in dictionary"]
-        lwDisplayEntry lw entry
+  luActions lw lu
+
+  on chModeButton #clicked (do
+    mode <- readIORef modeRef
+    case mode of
+      LookUp -> rtActions lw lu
+      ReadTest -> wtActions lw lu
+      WriteTest -> luActions lw lu
     )
+    
 
   on changeButton #clicked (do
     entry <- lwReadEntry lw
@@ -64,6 +73,16 @@ newLUW dictionary = do
     )
 
   -- layout
+
+  modeBox <- new Gtk.Box [ #orientation := Gtk.OrientationHorizontal ] 
+  #setSpacing modeBox 10
+  #setMarginStart modeBox 10
+  #setMarginEnd modeBox 10
+  #setMarginTop modeBox 10
+  #setMarginBottom modeBox 10
+
+  #add modeBox chModeButton
+  #add modeBox msgLabel
 
   searchBox <- new Gtk.Box [ #orientation := Gtk.OrientationHorizontal ] 
   #setSpacing searchBox 10
@@ -75,11 +94,10 @@ newLUW dictionary = do
   #add searchBox searchEntry
   #add searchBox searchButton
 
-
   luBox <- new Gtk.Box [ #orientation := Gtk.OrientationVertical ]
   #setSpacing luBox 10
   #setMarginTop luBox 10
-  #add luBox msgLabel
+  #add luBox modeBox
   #add luBox searchBox
 
   sep <- new Gtk.Separator [ #orientation := Gtk.OrientationHorizontal ]
@@ -96,17 +114,39 @@ newLUW dictionary = do
   #add box sep'
   #add box changeButton
 
-  return (box,
-          LookUpWidget { luwDictionary = dicRef
-                       , luwMode = mode
-                       , luwMessage = msgLabel
-                       , luwInput = searchEntry
-                       , luwSubmit = searchButton
-                       , luwChange = changeButton
-                       }
-         )
+  return (box,lu)
 
+luActions :: LangWidget -> LookUpWidget -> IO ()
+luActions lw lu = do
+  set (luwChangeMode lu) [ #label := "mode: look-up" ]
+  writeIORef (luwMode lu) LookUp
   
+  on (luwSubmit lu) #clicked (do
+    dic <- readIORef (luwDictionary lu)
+    word <- readEntry (luwInput lu)
+    let luEntry = dicLookup word dic
+    case luEntry of
+      Nothing -> do
+        set (luwMessage lu) [ #label := "not in dictionary"]
+        clearLW lw
+      Just entry -> do
+        set (luwMessage lu) [ #label := "found in dictionary"]
+        lwDisplayEntry lw entry
+    )
+  return ()
+
+rtActions :: LangWidget -> LookUpWidget -> IO ()
+rtActions lw lu = do
+  set (luwChangeMode lu) [ #label := "mode: read test" ]
+  writeIORef (luwMode lu) ReadTest
+  return ()
+
+wtActions :: LangWidget -> LookUpWidget -> IO ()
+wtActions lw lu = do
+  set (luwChangeMode lu) [ #label := "mode: write test" ]
+  writeIORef (luwMode lu) WriteTest
+  return ()
+
 -- Look Up
 lookUpGUI :: Dictionary -> IO Dictionary
 lookUpGUI dictionary = do

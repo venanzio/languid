@@ -27,3 +27,5 @@ main = do
   writeDictionary (dictFile++".dic") dic'
 
 
+
+
