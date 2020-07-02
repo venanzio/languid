@@ -17,19 +17,34 @@ import LookUp
 import EasyWidgets
 import LangWidget
 
+data LanguageMode = LookUp | ReadTest | WriteTest
+
 data LookUpWidget = LookUpWidget {
-    luwInput :: Gtk.Entry
-  , luwSubmit :: Gtk.Button
+    luwDictionary :: IORef Dictionary
+  , luwMode :: LanguageMode
   , luwMessage :: Gtk.Label
+  , luwInput :: Gtk.Entry
+  , luwSubmit :: Gtk.Button
+  , luwChange :: Gtk.Button  -- button to modify/add an entry
   }
 
-newLUW :: IORef Dictionary -> LangWidget -> IO (Gtk.Box, LookUpWidget)
-newLUW dicRef lw = do
+newLUW :: Dictionary -> IO (Gtk.Box, LookUpWidget)
+newLUW dictionary = do
+  (lwWidget, lw) <- newLangWidget
+  
+  dicRef <- newIORef dictionary
+
+  let mode = LookUp  -- TO DO: add a radio button to choose the mode
+
   msgLabel <- new Gtk.Label [ #label := "enter a word to search" ]
   
   searchEntry <- new Gtk.Entry [ #text := "search word" ]
 
   searchButton <- new Gtk.Button [ #label := "look-up" ]
+
+  changeButton <- new Gtk.Button [ #label := "Enter/Modify Entry in Dictionary" ]
+
+
   on searchButton #clicked (do
     dic <- readIORef dicRef
     word <- readEntry searchEntry
@@ -42,6 +57,13 @@ newLUW dicRef lw = do
         set msgLabel [ #label := "found in dictionary"]
         lwDisplayEntry lw entry
     )
+
+  on changeButton #clicked (do
+    entry <- lwReadEntry lw
+    modifyIORef dicRef (\dic -> updateDictionary dic entry)
+    )
+
+  -- layout
 
   searchBox <- new Gtk.Box [ #orientation := Gtk.OrientationHorizontal ] 
   #setSpacing searchBox 10
@@ -60,10 +82,27 @@ newLUW dicRef lw = do
   #add luBox msgLabel
   #add luBox searchBox
 
-  return (luBox,
-          LookUpWidget { luwInput = searchEntry
-                       , luwSubmit = searchButton
+  sep <- new Gtk.Separator [ #orientation := Gtk.OrientationHorizontal ]
+
+  box <- new Gtk.Box [ #orientation := Gtk.OrientationVertical ]
+  #setSpacing box 20
+
+  #add box luBox
+  #add box sep
+  #add box lwWidget
+
+
+  sep' <- new Gtk.Separator [ #orientation := Gtk.OrientationHorizontal ]
+  #add box sep'
+  #add box changeButton
+
+  return (box,
+          LookUpWidget { luwDictionary = dicRef
+                       , luwMode = mode
                        , luwMessage = msgLabel
+                       , luwInput = searchEntry
+                       , luwSubmit = searchButton
+                       , luwChange = changeButton
                        }
          )
 
@@ -71,43 +110,20 @@ newLUW dicRef lw = do
 -- Look Up
 lookUpGUI :: Dictionary -> IO Dictionary
 lookUpGUI dictionary = do
-  dicRef <- newIORef dictionary
-  
   Gtk.init Nothing 
 
-  (lwWidget, lw) <- newLangWidget
-  (luWidget, lu) <- newLUW dicRef lw
+  (luWidget, lu) <- newLUW dictionary
 
   win <- new Gtk.Window [ #title := "Dictionary Look-up" ]
   #setDefaultSize win 400 (-1)
   on win #destroy Gtk.mainQuit
 
-  sep <- new Gtk.Separator [ #orientation := Gtk.OrientationHorizontal ]
-
-  box <- new Gtk.Box [ #orientation := Gtk.OrientationVertical ]
-  #setSpacing box 20
-
-  #add box luWidget
-  #add box sep
-  #add box lwWidget
-
-  -- Button to enter a new or modified entry into the dictionary
-  changeButton <- new Gtk.Button [ #label := "Enter/Modify Entry in Dictionary" ]
-  on changeButton #clicked (do
-    entry <- lwReadEntry lw
-    modifyIORef dicRef (\dic -> updateDictionary dic entry)
-    )
-
-  sep' <- new Gtk.Separator [ #orientation := Gtk.OrientationHorizontal ]
-  #add box sep'
-  #add box changeButton
-
-  #add win box
+  #add win luWidget
 
   #showAll win
 
   Gtk.main
 
-  dic <- readIORef dicRef
+  dic <- readIORef (luwDictionary lu)
   return dic
 
