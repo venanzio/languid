@@ -14,8 +14,10 @@ import Data.IORef
 
 import Dictionary
 import LookUp
+import Tests
 import EasyWidgets
 import LangWidget
+
 
 data LanguageMode = LookUp | ReadTest | WriteTest
 
@@ -139,6 +141,22 @@ rtActions :: LangWidget -> LookUpWidget -> IO ()
 rtActions lw lu = do
   set (luwChangeMode lu) [ #label := "mode: read test" ]
   writeIORef (luwMode lu) ReadTest
+
+  dic <- readIORef (luwDictionary lu)
+  e <- randREntry dic
+
+  writeEntry (lwWord lw) (deWord e)
+  writeEntry (lwPronunciation lw) (dePronunciation e)
+
+  set (luwMessage lu) [ #label := "Guess the translation" ]
+
+  on (luwSubmit lu) #clicked (do
+    tr <- readEntry (luwInput lu)
+    if (checkTranslation e tr)
+      then set (luwMessage lu) [ #label := "Correct!" ]
+      else set (luwMessage lu) [ #label := "Wrong!" ]
+    )
+
   return ()
 
 wtActions :: LangWidget -> LookUpWidget -> IO ()
