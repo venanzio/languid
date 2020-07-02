@@ -19,7 +19,9 @@ import EasyWidgets
 import LangWidget
 
 
-data LanguageMode = LookUp | ReadTest | WriteTest
+data LanguageMode = LookUp
+                   | ReadTest DEntry | NextRTest
+                   | WriteTest DEntry | NextWTest
 
 data LookUpWidget = LookUpWidget {
     luwDictionary :: IORef Dictionary
@@ -43,7 +45,7 @@ newLUW dictionary = do
   
   msgLabel <- new Gtk.Label [ #label := "enter a word to search" ]
   
-  searchEntry <- new Gtk.Entry [ #text := "search word" ]
+  searchEntry <- new Gtk.Entry [ #text := "" ]
 
   searchButton <- new Gtk.Button [ #label := "look-up" ]
 
@@ -58,16 +60,38 @@ newLUW dictionary = do
                         , luwChange = changeButton
                         }
 
-  luActions lw lu
-
   on chModeButton #clicked (do
+    clearLW lw
     mode <- readIORef modeRef
     case mode of
-      LookUp -> rtActions lw lu
-      ReadTest -> wtActions lw lu
-      WriteTest -> luActions lw lu
+      LookUp      -> setRTMode lu
+      ReadTest  _ -> setWTMode lu
+      NextRTest   -> setWTMode lu
+      WriteTest _ -> setLUMode lu
+      NextWTest   -> setLUMode lu
     )
     
+  on searchButton #clicked (do
+    mode <- readIORef modeRef
+    case mode of
+      LookUp      -> luAction lw lu
+      NextRTest   -> nextRTAction lw lu
+      ReadTest  e -> rtAction lw lu e
+      NextWTest   -> undefined
+      WriteTest e -> undefined
+    )
+
+
+
+
+
+
+
+
+
+
+
+
 
   on changeButton #clicked (do
     entry <- lwReadEntry lw
@@ -117,36 +141,51 @@ newLUW dictionary = do
   #add box changeButton
 
   return (box,lu)
-
-luActions :: LangWidget -> LookUpWidget -> IO ()
-luActions lw lu = do
-  set (luwChangeMode lu) [ #label := "mode: look-up" ]
-  writeIORef (luwMode lu) LookUp
-
-  clearLW lw
-  clearEntry (luwInput lu)
   
-  on (luwSubmit lu) #clicked (do
-    dic <- readIORef (luwDictionary lu)
-    word <- readEntry (luwInput lu)
-    let luEntry = dicLookup word dic
-    case luEntry of
-      Nothing -> do
-        set (luwMessage lu) [ #label := "not in dictionary"]
-        clearLW lw
-      Just entry -> do
-        set (luwMessage lu) [ #label := "found in dictionary"]
-        lwDisplayEntry lw entry
-    )
+setLUMode lu = do
+  writeIORef (luwMode lu) LookUp
+  set (luwChangeMode lu) [ #label := "mode: look-up" ]
+  writeEntry (luwInput lu) ""
+  set (luwMessage lu) [ #label := "enter a word to search" ]
+  return ()
+    
+setRTMode lu = do
+  writeIORef (luwMode lu) NextRTest
+  set (luwChangeMode lu) [ #label := "mode: read test" ]
+  set (luwMessage lu) [ #label := "guess the translation" ]
+  writeEntry (luwInput lu) ""
+  set (luwSubmit lu) [ #label := "next word" ]
   return ()
 
-rtActions :: LangWidget -> LookUpWidget -> IO ()
-rtActions lw lu = do
+setWTMode lu = do
+  writeIORef (luwMode lu) NextWTest
+  set (luwChangeMode lu) [ #label := "mode: write test" ]
+  writeEntry (luwInput lu) ""
+  set (luwSubmit lu) [ #label := "next word" ]
+  return ()
+
+luAction :: LangWidget -> LookUpWidget -> IO ()
+luAction lw lu = do
+  dic <- readIORef (luwDictionary lu)
+  word <- readEntry (luwInput lu)
+  clearEntry (luwInput lu)
+  let luEntry = dicLookup word dic
+  case luEntry of
+    Nothing -> do
+      set (luwMessage lu) [ #label := "not in dictionary"]
+      clearLW lw
+      writeEntry (lwWord lw) word
+    Just entry -> do
+      set (luwMessage lu) [ #label := "found in dictionary"]
+      lwDisplayEntry lw entry
+
+nextRTAction :: LangWidget -> LookUpWidget -> IO ()
+nextRTAction lw lu = do
   set (luwChangeMode lu) [ #label := "mode: read test" ]
-  writeIORef (luwMode lu) ReadTest
 
   dic <- readIORef (luwDictionary lu)
   e <- randREntry dic
+  writeIORef (luwMode lu) (ReadTest e)
 
   clearLW lw
   clearEntry (luwInput lu)
@@ -159,33 +198,27 @@ rtActions lw lu = do
   set (luwMessage lu) [ #label := "Guess the translation" ]
 
   set (luwSubmit lu) [ #label := "submit" ]
-  on (luwSubmit lu) #clicked (do
-    tr <- readEntry (luwInput lu)
-    putStrLn ("Your entered the translation: " ++ tr)
-    lwDisplayEntry lw e
-    if (checkTranslation e tr)
-      then (do set (luwMessage lu) [ #label := "Correct!" ]
-               let e' = updateRChecks e (deRChecks e - 1)
-               modifyIORef (luwDictionary lu) (\dic -> updateDictionary dic e')
-           )
-      else (do set (luwMessage lu) [ #label := "Wrong!" ]
-               let e' = updateRChecks e (deRChecks e + 1)
-               modifyIORef (luwDictionary lu) (\dic -> updateDictionary dic e')
-           )
-    set (luwSubmit lu) [ #label := "next word" ]
-    on (luwSubmit lu) #clicked (do
-      putStrLn " submit button has been clicked"
-      (rtActions lw lu)
-      )
-    return ()
-    )
 
-  return ()
+rtAction :: LangWidget -> LookUpWidget -> DEntry -> IO ()
+rtAction lw lu e = do
+  tr <- readEntry (luwInput lu)
+
+  newRChecks <- if (checkTranslation e tr)
+    then (set (luwMessage lu) [ #label := "Correct!" ] >> return (deRChecks e - 1))
+    else (set (luwMessage lu) [ #label := "Wrong!" ] >> return (deRChecks e + 1))
+
+  let e' = updateRChecks e newRChecks
+  lwDisplayEntry lw e'
+  modifyIORef (luwDictionary lu) (\dic -> updateDictionary dic e')
+
+  set (luwSubmit lu) [ #label := "next word" ]
+  writeIORef (luwMode lu) NextRTest
+
 
 wtActions :: LangWidget -> LookUpWidget -> IO ()
 wtActions lw lu = do
   set (luwChangeMode lu) [ #label := "mode: write test" ]
-  writeIORef (luwMode lu) WriteTest
+  writeIORef (luwMode lu) LookUp
   return ()
 
 -- Look Up
