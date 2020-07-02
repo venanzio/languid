@@ -77,8 +77,8 @@ newLUW dictionary = do
       LookUp      -> luAction lw lu
       NextRTest   -> nextRTAction lw lu
       ReadTest  e -> rtAction lw lu e
-      NextWTest   -> undefined
-      WriteTest e -> undefined
+      NextWTest   -> nextWTAction lw lu
+      WriteTest e -> wtAction lw lu e
     )
 
 
@@ -147,6 +147,7 @@ setLUMode lu = do
   set (luwChangeMode lu) [ #label := "mode: look-up" ]
   writeEntry (luwInput lu) ""
   set (luwMessage lu) [ #label := "enter a word to search" ]
+  set (luwSubmit lu) [ #label := "look-up" ]
   return ()
     
 setRTMode lu = do
@@ -160,6 +161,7 @@ setRTMode lu = do
 setWTMode lu = do
   writeIORef (luwMode lu) NextWTest
   set (luwChangeMode lu) [ #label := "mode: write test" ]
+  set (luwMessage lu) [ #label := "guess the word" ]
   writeEntry (luwInput lu) ""
   set (luwSubmit lu) [ #label := "next word" ]
   return ()
@@ -214,12 +216,40 @@ rtAction lw lu e = do
   set (luwSubmit lu) [ #label := "next word" ]
   writeIORef (luwMode lu) NextRTest
 
-
-wtActions :: LangWidget -> LookUpWidget -> IO ()
-wtActions lw lu = do
+nextWTAction :: LangWidget -> LookUpWidget -> IO ()
+nextWTAction lw lu = do
   set (luwChangeMode lu) [ #label := "mode: write test" ]
-  writeIORef (luwMode lu) LookUp
-  return ()
+
+  dic <- readIORef (luwDictionary lu)
+  e <- randWEntry dic
+  writeIORef (luwMode lu) (WriteTest e)
+
+  clearLW lw
+  clearEntry (luwInput lu)
+  
+  writeVText (lwTranslation lw) (deTranslation e)
+  setSimpleSB (lwRChecks lw) (deRChecks e)
+  setSimpleSB (lwWChecks lw) (deWChecks e)
+
+  set (luwMessage lu) [ #label := "Guess word" ]
+
+  set (luwSubmit lu) [ #label := "submit" ]
+
+wtAction :: LangWidget -> LookUpWidget -> DEntry -> IO ()
+wtAction lw lu e = do
+  tr <- readEntry (luwInput lu)
+
+  newWChecks <- if (tr == deWord e)
+    then (set (luwMessage lu) [ #label := "Correct!" ] >> return (deWChecks e - 1))
+    else (set (luwMessage lu) [ #label := "Wrong!" ] >> return (deWChecks e + 1))
+
+  let e' = updateWChecks e newWChecks
+  lwDisplayEntry lw e'
+  modifyIORef (luwDictionary lu) (\dic -> updateDictionary dic e')
+
+  set (luwSubmit lu) [ #label := "next word" ]
+  writeIORef (luwMode lu) NextWTest
+
 
 -- Look Up
 lookUpGUI :: Dictionary -> IO Dictionary

@@ -20,7 +20,7 @@ writeTestDic :: String -> IO ()
 writeTestDic fileName = do
   dic <- readDictionary (fileName++".dic")
   writeDictionary (fileName++".dic.bak") dic  -- back up
-  dic' <- readTest dic
+  dic' <- writeTest dic
   writeDictionary (fileName++".dic") dic'
 
 lookupAddDic :: String -> IO ()

@@ -207,7 +207,7 @@ Alternant au gré des rythmes entre la grâce d'un cygne et la vivacité d'un ra
 <usage>nf</usage>
 <translation>arbour (pergola)</translation>
 <phrase>L'été, nous mangeons sous la tonnelle.</phrase>
-<wchecks>8</wchecks>
+<wchecks>9</wchecks>
 </entry>
 
 <entry>
@@ -235,7 +235,7 @@ Alternant au gré des rythmes entre la grâce d'un cygne et la vivacité d'un ra
 <usage>adj</usage>
 <translation>damn, wretched, darned</translation>
 <phrase>Sachez que je suis né avec cette fichue coupe de cheveux il y a quelques siècle déjà.</phrase>
-<wchecks>5</wchecks>
+<wchecks>6</wchecks>
 </entry>
 
 <entry>
@@ -332,7 +332,7 @@ attendez-moi, ne bougez pas d'une semelle</phrase>
 <usage>vtr</usage>
 <translation>twiddle</translation>
 <phrase>...  m'avait-elle supplié en tripotant nerveusement son long collier de perles</phrase>
-<wchecks>9</wchecks>
+<wchecks>10</wchecks>
 </entry>
 
 <entry>
@@ -447,7 +447,7 @@ un terrain plein de bosses
 <translation>crazy, screwy, nuts; loony, screwball</translation>
 <phrase>Elle répondit à ma mère en hurlant qu'on était une famille de cinglés.</phrase>
 <note>(f cinglée)</note>
-<wchecks>6</wchecks>
+<wchecks>5</wchecks>
 </entry>
 
 <entry>
@@ -489,7 +489,7 @@ un terrain plein de bosses
 un musicien raté
 = a failed musician</phrase>
 <note>(f ratée)</note>
-<wchecks>4</wchecks>
+<wchecks>3</wchecks>
 </entry>
 
 <entry>
@@ -539,7 +539,7 @@ se déguiser en courant d'air
 <usage>nf</usage>
 <translation>bath, bathtub</translation>
 <phrase>Il remplissait la baignoire, enlevait des litres, avec une bouteille.</phrase>
-<wchecks>8</wchecks>
+<wchecks>9</wchecks>
 </entry>
 
 <entry>
@@ -776,7 +776,7 @@ En reculant sur le palier, le monsieur des impôtes cria: " ... "</phrase>
 <translation>mail, letters, post</translation>
 <phrase>il y a du courrier pour moi aujourd'hui?
 = are there any letters for me today?</phrase>
-<wchecks>7</wchecks>
+<wchecks>8</wchecks>
 </entry>
 
 <entry>
@@ -786,7 +786,7 @@ En reculant sur le palier, le monsieur des impôtes cria: " ... "</phrase>
 <translation>prison, penal colony</translation>
 <phrase>c'est le bagne, ici!
 = they work you to death in this place!</phrase>
-<wchecks>3</wchecks>
+<wchecks>4</wchecks>
 </entry>
 
 <entry>
@@ -1019,8 +1019,8 @@ Un après-midi, à notre arrivée, nous l'avions trouvée en grande conversation
 <usage>vt</usage>
 <translation>crumple, crease (up)</translation>
 <phrase>avoir un visage tout fripé = to have crease-marks all over one's face</phrase>
-<wchecks>8</wchecks>
 <rchecks>5</rchecks>
+<wchecks>9</wchecks>
 </entry>
 
 <entry>
@@ -1050,7 +1050,7 @@ Je suis la reine des fous, apportez-moi une passoire ou un entonnoir.</phrase>
 <usage>nm</usage>
 <translation>funnel</translation>
 <phrase>Je suis la reine des fous, apportez-moi une passoire ou un entonnoir.</phrase>
-<wchecks>6</wchecks>
+<wchecks>7</wchecks>
 </entry>
 
 <entry>
@@ -1131,7 +1131,7 @@ La chambre de Maman s'était transformée en musée miniature et en foutoir géa
 C'est pile-poil ce que je cherchais
 = That's exactly what I was looking for
 Il y a pile poil quatre ans maintenant, Maman a été kidnappée.</phrase>
-<wchecks>4</wchecks>
+<wchecks>3</wchecks>
 </entry>
 
 <entry>
@@ -1221,7 +1221,7 @@ on en avait marre de venir à la clinique tous les jours</phrase>
 <phrase>Ces étudiants sont largués en mathématiques.
 = These students are out of their depth in maths.</phrase>
 <note>f larguée</note>
-<rchecks>7</rchecks>
+<rchecks>8</rchecks>
 </entry>
 
 <entry>
@@ -1427,8 +1427,8 @@ le public a boudé son film
 <phrase>on piétine, il faut se décider
 = we're not getting anywhere, let's make up our minds
 Alors le flic réspondait, toujours embarassé, que l'enquête piétinait mais qu'ils continuaient chercher.</phrase>
-<wchecks>3</wchecks>
 <rchecks>7</rchecks>
+<wchecks>2</wchecks>
 </entry>
 
 <entry>
@@ -1447,7 +1447,7 @@ Elle plongeait des rochers puis elle faisait la planche en regardante le soleil 
 <usage>nf</usage>
 <translation>beehive</translation>
 <phrase>un énorme petit-déjeuner, avec du jus d'oranges cuellies dans les arbres du jardin et du miel qui venait des ruches du voisin.</phrase>
-<wchecks>6</wchecks>
+<wchecks>7</wchecks>
 </entry>
 
 <entry>
@@ -1456,7 +1456,7 @@ Elle plongeait des rochers puis elle faisait la planche en regardante le soleil 
 <usage>nm</usage>
 <translation>pebble</translation>
 <phrase>sur les galets = on the shingle</phrase>
-<wchecks>6</wchecks>
+<wchecks>7</wchecks>
 </entry>
 
 <entry>
@@ -1729,7 +1729,7 @@ Une confiance qui s'ancrait dans toutes les sources d'aide, d'amour, d'affection
 <usage>vt; v pron</usage>
 <translation>glimpse, catch sight of, notice; notice, become aware (de = of), realize</translation>
 <phrase>On s'apercevrait peu à peu que cette gratitude devrait englober la terre entière.</phrase>
-<wchecks>5</wchecks>
+<wchecks>6</wchecks>
 </entry>
 
 <entry>
@@ -2245,8 +2245,8 @@ La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, da
 <translation>primrose</translation>
 <phrase>Les primevères sont les premières fleurs à fleurir après l'hiver.</phrase>
 <note>petite plante fleurissant tôt</note>
-<wchecks>5</wchecks>
 <rchecks>9</rchecks>
+<wchecks>6</wchecks>
 </entry>
 
 </dictionary>
