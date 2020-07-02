@@ -1061,7 +1061,7 @@ Je suis la reine des fous, apportez-moi une passoire ou un entonnoir.</phrase>
 <phrase>sa chambre est un vrai foutoir
 = her room is a complete dump
 La chambre de Maman s'était transformée en musée miniature et en foutoir géant.</phrase>
-<wchecks>6</wchecks>
+<wchecks>7</wchecks>
 </entry>
 
 <entry>
@@ -1081,7 +1081,7 @@ La chambre de Maman s'était transformée en musée miniature et en foutoir géa
 <translation>ground floor (UK), first floor (US)</translation>
 <phrase>habiter un rez-de-chaussée
 = to live in a ground-floor flat</phrase>
-<wchecks>6</wchecks>
+<wchecks>5</wchecks>
 </entry>
 
 <entry>
@@ -1181,7 +1181,7 @@ on en avait marre de venir à la clinique tous les jours</phrase>
 <usage>nf</usage>
 <translation>phial</translation>
 <phrase>Elle avait volé une fiole de son sang lors de ses derniers examens.</phrase>
-<wchecks>7</wchecks>
+<wchecks>8</wchecks>
 </entry>
 
 <entry>

@@ -59,7 +59,7 @@ newLUW dictionary = do
                         , luwSubmit = searchButton
                         , luwChange = changeButton
                         }
-
+  
   on chModeButton #clicked (do
     clearLW lw
     mode <- readIORef modeRef
@@ -70,8 +70,9 @@ newLUW dictionary = do
       WriteTest _ -> setLUMode lu
       NextWTest   -> setLUMode lu
     )
-    
-  on searchButton #clicked (do
+
+  -- pressing enter on the input entry or clicking the search button are equivalent
+  on searchEntry #activate (do
     mode <- readIORef modeRef
     case mode of
       LookUp      -> luAction lw lu
@@ -81,17 +82,15 @@ newLUW dictionary = do
       WriteTest e -> wtAction lw lu e
     )
 
-
-
-
-
-
-
-
-
-
-
-
+  on searchButton #clicked (do
+    mode <- readIORef modeRef
+    case mode of
+      LookUp      -> luAction lw lu
+      NextRTest   -> nextRTAction lw lu
+      ReadTest  e -> rtAction lw lu e
+      NextWTest   -> nextWTAction lw lu
+      WriteTest e -> wtAction lw lu e
+    )
 
   on changeButton #clicked (do
     entry <- lwReadEntry lw
