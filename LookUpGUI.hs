@@ -122,6 +122,9 @@ luActions :: LangWidget -> LookUpWidget -> IO ()
 luActions lw lu = do
   set (luwChangeMode lu) [ #label := "mode: look-up" ]
   writeIORef (luwMode lu) LookUp
+
+  clearLW lw
+  clearEntry (luwInput lu)
   
   on (luwSubmit lu) #clicked (do
     dic <- readIORef (luwDictionary lu)
@@ -145,16 +148,36 @@ rtActions lw lu = do
   dic <- readIORef (luwDictionary lu)
   e <- randREntry dic
 
+  clearLW lw
+  clearEntry (luwInput lu)
+  
   writeEntry (lwWord lw) (deWord e)
   writeEntry (lwPronunciation lw) (dePronunciation e)
+  setSimpleSB (lwRChecks lw) (deRChecks e)
+  setSimpleSB (lwWChecks lw) (deWChecks e)
 
   set (luwMessage lu) [ #label := "Guess the translation" ]
 
+  set (luwSubmit lu) [ #label := "submit" ]
   on (luwSubmit lu) #clicked (do
     tr <- readEntry (luwInput lu)
+    putStrLn ("Your entered the translation: " ++ tr)
+    lwDisplayEntry lw e
     if (checkTranslation e tr)
-      then set (luwMessage lu) [ #label := "Correct!" ]
-      else set (luwMessage lu) [ #label := "Wrong!" ]
+      then (do set (luwMessage lu) [ #label := "Correct!" ]
+               let e' = updateRChecks e (deRChecks e - 1)
+               modifyIORef (luwDictionary lu) (\dic -> updateDictionary dic e')
+           )
+      else (do set (luwMessage lu) [ #label := "Wrong!" ]
+               let e' = updateRChecks e (deRChecks e + 1)
+               modifyIORef (luwDictionary lu) (\dic -> updateDictionary dic e')
+           )
+    set (luwSubmit lu) [ #label := "next word" ]
+    on (luwSubmit lu) #clicked (do
+      putStrLn " submit button has been clicked"
+      (rtActions lw lu)
+      )
+    return ()
     )
 
   return ()

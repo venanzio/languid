@@ -4,7 +4,7 @@
 <usage>nm inv (populaire)</usage>
 <translation>dance</translation>
 <phrase>Il y a souvent un pince-fesses en fin d'année scolaire.</phrase>
-<rchecks>1</rchecks>
+<rchecks>2</rchecks>
 </entry>
 
 <entry>
@@ -32,7 +32,7 @@
 <translation>engage, put in gear; embark (sur = upon/on); set in motion</translation>
 <phrase>Si tu veux avancer, tu embrayes et tu accélères.
 Ainsi, la veille, au diner, j'avais embrayé dès l'entrée sur ma filiation avec un prince hongrois.</phrase>
-<rchecks>2</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -41,7 +41,7 @@ Ainsi, la veille, au diner, j'avais embrayé dès l'entrée sur ma filiation ave
 <usage>transitive verb</usage>
 <translation>pull, carry along, drive, drag, lead</translation>
 <phrase>Elle fut suivie par son mari qui entraîna le reste de la table, et la suite du diner tourna autour de ce sujet.</phrase>
-<rchecks>1</rchecks>
+<rchecks>3</rchecks>
 </entry>
 
 <entry>
@@ -50,7 +50,7 @@ Ainsi, la veille, au diner, j'avais embrayé dès l'entrée sur ma filiation ave
 <usage>transitive verb</usage>
 <translation>intoxicate</translation>
 <phrase>Le lendemain midi, grisé par mon succès de la veille, j'avais récidivé avec de nouveaux cobayes.</phrase>
-<rchecks>2</rchecks>
+<rchecks>3</rchecks>
 </entry>
 
 <entry>
@@ -96,7 +96,7 @@ L'enfance s'était déroulée dans le vacarme industriel des ateliers.</phrase>
 <usage>vi</usage>
 <translation>make up stories</translation>
 <phrase>J'avais corsé l'affaire en m'affabulant d'un autisme profond qui m'avait fait rester muet jusqu'à l'âge de sept ans.</phrase>
-<rchecks>2</rchecks>
+<rchecks>4</rchecks>
 </entry>
 
 <entry>
@@ -114,7 +114,7 @@ L'enfance s'était déroulée dans le vacarme industriel des ateliers.</phrase>
 <usage>vtr; vi</usage>
 <translation>chain up, link (together); carry on</translation>
 <phrase>"Ahhh, mais ..." avait enchaîné ma voisine.</phrase>
-<rchecks>2</rchecks>
+<rchecks>4</rchecks>
 </entry>
 
 <entry>
@@ -133,7 +133,7 @@ The elbow is located between the upper and the lower arm.</phrase>
 <translation>(bras, doigts) move, (orteils, oreilles) wiggle, swing, wave</translation>
 <phrase>Arrête de remuer le jambes!
 .. les mouvements cadencés de sa tête remuant les plumes de sa coiffe ..</phrase>
-<rchecks>4</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -162,7 +162,7 @@ Alternant au gré des rythmes entre la grâce d'un cygne et la vivacité d'un ra
 <usage>vtr</usage>
 <translation>amuse, brighten up, cheer up</translation>
 <phrase>Ce spectacle nous a égayés toute l'après-midi.</phrase>
-<rchecks>2</rchecks>
+<rchecks>4</rchecks>
 </entry>
 
 <entry>
@@ -519,7 +519,7 @@ se déguiser en courant d'air
 <usage>nm</usage>
 <translation>(pair of man's) underpants, (pair of) long johns, (swimming) trunks</translation>
 <phrase>caleçon(s) court(s) = pair of (man's) underpants</phrase>
-<rchecks>2</rchecks>
+<rchecks>4</rchecks>
 </entry>
 
 <entry>
@@ -530,7 +530,7 @@ se déguiser en courant d'air
 <phrase>elle est tordante, ta fille
 = your daughter's a scream, riot, hoot</phrase>
 <note>(f tordante [tɔrdɑ̃ t])</note>
-<rchecks>3</rchecks>
+<rchecks>4</rchecks>
 </entry>
 
 <entry>
@@ -587,7 +587,7 @@ Quand il roupillait, j'adorais regarder son ventre suer.</phrase>
 <usage>vi</usage>
 <translation>whirl, swirl</translation>
 <phrase>Allors elle se changeait à nouveau, faisai tournoyer ses vêtements, dansait en sous-vêtements.</phrase>
-<rchecks>1</rchecks>
+<rchecks>4</rchecks>
 </entry>
 
 <entry>
@@ -596,7 +596,7 @@ Quand il roupillait, j'adorais regarder son ventre suer.</phrase>
 <translation>impressive</translation>
 <phrase>Son interprétation dans cette pièce est bluffant.</phrase>
 <note>pp of bluffer</note>
-<rchecks>1</rchecks>
+<rchecks>2</rchecks>
 </entry>
 
 <entry>
@@ -654,7 +654,7 @@ la voix des enfants retentissait dans l'escalier
 <usage>vt</usage>
 <translation>desert, neglect, relinquish</translation>
 <phrase>"..." avait-elle gémi avant de délaisser son oreiller pour m'agripper.</phrase>
-<rchecks>4</rchecks>
+<rchecks>8</rchecks>
 </entry>
 
 <entry>
@@ -694,7 +694,7 @@ faire des âneries = to make stupid mistakes
 <translation>grumpy, crotchety</translation>
 <phrase>un air grognon = a surly look</phrase>
 <note>f. grognonne [grɔɲɔn]</note>
-<rchecks>4</rchecks>
+<rchecks>5</rchecks>
 </entry>
 
 <entry>
@@ -807,7 +807,7 @@ En reculant sur le palier, le monsieur des impôtes cria: " ... "</phrase>
 = he was so distrought he forgot to ...
 revenir de ses égarements
 = to see the error of one's ways</phrase>
-<rchecks>1</rchecks>
+<rchecks>2</rchecks>
 </entry>
 
 <entry>
@@ -911,7 +911,7 @@ Comment le nourrisson apprend-il à parler, à penser, à compter?</phrase>
 <phrase>se faire arracher une dent
 = to have a tooth out
 les policiers interrogère longuement Maman en s'arrachant les cheveux devant son aplomb désarmant</phrase>
-<rchecks>4</rchecks>
+<rchecks>8</rchecks>
 </entry>
 
 <entry>
@@ -921,8 +921,8 @@ les policiers interrogère longuement Maman en s'arrachant les cheveux devant so
 <translation>finish, end, bring to a close</translation>
 <phrase>ainsi s'achève notre journal
 = that's the end of the news</phrase>
-<rchecks>1</rchecks>
 <wchecks>4</wchecks>
+<rchecks>2</rchecks>
 </entry>
 
 <entry>
@@ -1019,8 +1019,8 @@ Un après-midi, à notre arrivée, nous l'avions trouvée en grande conversation
 <usage>vt</usage>
 <translation>crumple, crease (up)</translation>
 <phrase>avoir un visage tout fripé = to have crease-marks all over one's face</phrase>
-<rchecks>4</rchecks>
 <wchecks>8</wchecks>
+<rchecks>5</rchecks>
 </entry>
 
 <entry>
@@ -1030,7 +1030,7 @@ Un après-midi, à notre arrivée, nous l'avions trouvée en grande conversation
 <translation>rule over, run</translation>
 <phrase>il veut régenter tout le monde
 = he wants everybody to be at his beck and call</phrase>
-<rchecks>3</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -1099,7 +1099,7 @@ La chambre de Maman s'était transformée en musée miniature et en foutoir géa
 <usage>nm</usage>
 <translation>bumblebee; great bell; (son de basse) drone</translation>
 <phrase>avoir le bourdon (fam) = to feel down, to be down in the dumps</phrase>
-<rchecks>1</rchecks>
+<rchecks>3</rchecks>
 </entry>
 
 <entry>
@@ -1150,7 +1150,7 @@ Il y a pile poil quatre ans maintenant, Maman a été kidnappée.</phrase>
 <usage>vi</usage>
 <translation>hang around, loiter</translation>
 <phrase>Le personnel n'avait remarqué aucune personne bizarre rôdant autour du bâtiment.</phrase>
-<rchecks>3</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -1172,7 +1172,7 @@ on en avait marre de venir à la clinique tous les jours</phrase>
 <translation>postpone, put off; take back</translation>
 <phrase>reporter quelque chose à une prochaine fois
 = to put something off until another time</phrase>
-<rchecks>2</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -1221,7 +1221,7 @@ on en avait marre de venir à la clinique tous les jours</phrase>
 <phrase>Ces étudiants sont largués en mathématiques.
 = These students are out of their depth in maths.</phrase>
 <note>f larguée</note>
-<rchecks>4</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -1272,7 +1272,7 @@ il est resté cloué au lit pendant trois jours
 = you are requested to use the underpass
 nous allons emprunter les petites routes jusqu'à la frontière
 Il a fallu que je monte chez Emmanuel pour lui emprunter une cravate noire et un brassard.</phrase>
-<rchecks>2</rchecks>
+<rchecks>5</rchecks>
 </entry>
 
 <entry>
@@ -1282,7 +1282,7 @@ Il a fallu que je monte chez Emmanuel pour lui emprunter une cravate noire et un
 <translation>borrowing, loan</translation>
 <phrase>d'emprunt = assumed
 Liberty Bojangles, ce n'est pas très discret comme nom d'emprunt pour une personne recherchée partout!</phrase>
-<rchecks>1</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -1313,7 +1313,7 @@ Liberty Bojangles, ce n'est pas très discret comme nom d'emprunt pour une perso
 <phrase>accabler quelqu'un de critiques
 = to be highly critical of somebody
 Histérie, bipolarité, schizophénie, le médecins l'avaient accablé de tout leur savant vocable pour désigner le fous à lier.</phrase>
-<rchecks>1</rchecks>
+<rchecks>3</rchecks>
 </entry>
 
 <entry>
@@ -1324,7 +1324,7 @@ Histérie, bipolarité, schizophénie, le médecins l'avaient accablé de tout l
 <phrase>être dans le désarroi le plus profond
 = to be utterly dismayed, to be in utter confusion
 J'entendais bien le désarroi dans sa voix.</phrase>
-<rchecks>4</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -1344,7 +1344,7 @@ J'entendais bien le désarroi dans sa voix.</phrase>
 <phrase>la maison recèle un secret
 = the house holds a secret
 je savais bien que pour une fois sa plaidoirie ne recelait aucune fantaisie</phrase>
-<rchecks>4</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -1355,7 +1355,7 @@ je savais bien que pour une fois sa plaidoirie ne recelait aucune fantaisie</phr
 <phrase>j'ai la mémoire qui flanche 
 = my memory is failing me
 Pas une fois il n'avait flanché, pas une larme n'avait coulé sur son visage fier et sage.</phrase>
-<rchecks>2</rchecks>
+<rchecks>4</rchecks>
 </entry>
 
 <entry>
@@ -1366,7 +1366,7 @@ Pas une fois il n'avait flanché, pas une larme n'avait coulé sur son visage fi
 <phrase>cette affaire lui cause bien du tracas
 = this business is causing her a lot of worry
 Il faut mettre un coup de pied au cul de ces foutus tracas</phrase>
-<rchecks>2</rchecks>
+<rchecks>3</rchecks>
 </entry>
 
 <entry>
@@ -1405,7 +1405,7 @@ elle est très popote
 <translation>skewer, spit</translation>
 <phrase>cuit à la broche
 = roasted on a spit</phrase>
-<rchecks>3</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -1416,7 +1416,7 @@ elle est très popote
 <phrase>... elle s'était échappée immédiatement en direction du lac et y était restée toute la journée pour bouder.
 le public a boudé son film
 = hardly anyone went to see her film</phrase>
-<rchecks>4</rchecks>
+<rchecks>8</rchecks>
 </entry>
 
 <entry>
@@ -1427,8 +1427,8 @@ le public a boudé son film
 <phrase>on piétine, il faut se décider
 = we're not getting anywhere, let's make up our minds
 Alors le flic réspondait, toujours embarassé, que l'enquête piétinait mais qu'ils continuaient chercher.</phrase>
-<rchecks>3</rchecks>
 <wchecks>3</wchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -1467,7 +1467,7 @@ Elle plongeait des rochers puis elle faisait la planche en regardante le soleil 
 <phrase>il a un épi = his hair sticks out
 épi de maïs = corncob
 En remontant, nous retrouvions Papa qui avait bien travaillé, le visage tout fripé, avec des idées et des épis plein la tête.</phrase>
-<rchecks>1</rchecks>
+<rchecks>3</rchecks>
 </entry>
 
 <entry>
@@ -1486,7 +1486,7 @@ En remontant, nous retrouvions Papa qui avait bien travaillé, le visage tout fr
 <translation>rickety, wobbly; lame; unsound, weak</translation>
 <phrase>J'étais tellement bancal que, s'il n'y avait pas eu la médecine, j'aurais sans doute mal cheminé.</phrase>
 <note>f bancale, mpl bancals</note>
-<rchecks>3</rchecks>
+<rchecks>5</rchecks>
 </entry>
 
 <entry>
@@ -1496,7 +1496,7 @@ En remontant, nous retrouvions Papa qui avait bien travaillé, le visage tout fr
 <translation>dent</translation>
 <phrase>voiture cabossée = battered car
 je pardonne toujour à mes patients d'être trop accrochés à leur ego cabossé</phrase>
-<rchecks>2</rchecks>
+<rchecks>3</rchecks>
 </entry>
 
 <entry>
@@ -1506,7 +1506,7 @@ je pardonne toujour à mes patients d'être trop accrochés à leur ego cabossé
 <translation>measuring rod</translation>
 <phrase>L'aune servait à mesurer les tissus.
 Il m'arrive d'avoir des pensées et des paroles que je me reproche quand je les évalue à l'aune de l'altruisme.</phrase>
-<rchecks>1</rchecks>
+<rchecks>3</rchecks>
 </entry>
 
 <entry>
@@ -1517,7 +1517,7 @@ Il m'arrive d'avoir des pensées et des paroles que je me reproche quand je les 
 <phrase>regarder quelque chose avec convoitise
 = to stare at something greedily
 La publicité, en excitant mille convoitises, en livre un parfait exemple.</phrase>
-<rchecks>4</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -1527,7 +1527,7 @@ La publicité, en excitant mille convoitises, en livre un parfait exemple.</phra
 <translation>lift up, raise; (de) come under, be a matter for</translation>
 <phrase>cela relève des tribunaux = it's a matter for the courts
 Distinguer en soi ce qui relève du désir adéquat ou pas est un exercice très libérateur.</phrase>
-<rchecks>3</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -1573,7 +1573,7 @@ Distinguer en soi ce qui relève du désir adéquat ou pas est un exercice très
 <usage>nf</usage>
 <translation>doe, hind</translation>
 <phrase>ma biche = my darling</phrase>
-<rchecks>2</rchecks>
+<rchecks>5</rchecks>
 </entry>
 
 <entry>
@@ -1582,7 +1582,7 @@ Distinguer en soi ce qui relève du désir adéquat ou pas est un exercice très
 <usage>vi</usage>
 <translation>snigger, laugh nervously, giggle</translation>
 <phrase>Dans le métro, losque des gens ricanent à mon passage, je profite de l'occasion pour me rappeler que je ne me réduis pas aux apparences.</phrase>
-<rchecks>3</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -1592,7 +1592,7 @@ Distinguer en soi ce qui relève du désir adéquat ou pas est un exercice très
 <translation>stagnate, grow foul</translation>
 <phrase>je ne vais pas croupir ici toute ma vie
 = I'm not going to rot here all my life</phrase>
-<rchecks>8</rchecks>
+<rchecks>11</rchecks>
 </entry>
 
 <entry>
@@ -1602,7 +1602,7 @@ Distinguer en soi ce qui relève du désir adéquat ou pas est un exercice très
 <translation>support, shoulder, back up</translation>
 <phrase>il a besoin de se sentir épaulé
 = he needs to feel that people are supporting him</phrase>
-<rchecks>1</rchecks>
+<rchecks>3</rchecks>
 </entry>
 
 <entry>
@@ -1611,7 +1611,7 @@ Distinguer en soi ce qui relève du désir adéquat ou pas est un exercice très
 <usage>vt, v pron intr</usage>
 <translation>lead astray, mislead; be in error, make a mistake, go astray</translation>
 <phrase>On peut se fourvoyer dans sa méditation, s'imaginer à tort avoir atteint des états spirituels profonds.</phrase>
-<rchecks>4</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -1629,7 +1629,7 @@ Distinguer en soi ce qui relève du désir adéquat ou pas est un exercice très
 <usage>vt</usage>
 <translation>start, open, begin, launch</translation>
 <phrase>pratiquer le chemin octuple pour entamer cette ascension</phrase>
-<rchecks>1</rchecks>
+<rchecks>3</rchecks>
 </entry>
 
 <entry>
@@ -1638,7 +1638,7 @@ Distinguer en soi ce qui relève du désir adéquat ou pas est un exercice très
 <usage>vt</usage>
 <translation>climb</translation>
 <phrase>le mont Everest est là et il nour reste à le gravir, bien que la route soit éminemment ardue</phrase>
-<rchecks>3</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -1647,7 +1647,7 @@ Distinguer en soi ce qui relève du désir adéquat ou pas est un exercice très
 <usage>vt; v pron intr</usage>
 <translation>ruin, damage; go to ruins, fall apart, collapse</translation>
 <phrase>elle avait un cancer, et peu à peu son état physiqe se délabrait</phrase>
-<rchecks>4</rchecks>
+<rchecks>8</rchecks>
 </entry>
 
 <entry>
@@ -1667,7 +1667,7 @@ Bien souvent, les gens sont mal à l'aise avec cette démarche.</phrase>
 <usage>vt; v pron intr</usage>
 <translation>open (up), light up; bloom, light up, open, blossom</translation>
 <phrase>une "bonne" et saine estime de soi est indispensable pour s'épanouir dans l'existence</phrase>
-<rchecks>7</rchecks>
+<rchecks>12</rchecks>
 </entry>
 
 <entry>
@@ -1688,7 +1688,7 @@ La confiance véritable naît de l'affranchissement des pièges et du carcan de 
 <phrase>pris dan les règlements comme dans un carcan
 = hemmed in by regulations
 La confiance véritable naît de l'affranchissement des pièges et du carcan de l'ego.</phrase>
-<rchecks>1</rchecks>
+<rchecks>3</rchecks>
 </entry>
 
 <entry>
@@ -1699,7 +1699,7 @@ La confiance véritable naît de l'affranchissement des pièges et du carcan de 
 <phrase>couvrir quelqu'un de louanges
 = to heap praise on somebody
 On se préoccupe moins des critiques et des louanges.</phrase>
-<rchecks>2</rchecks>
+<rchecks>5</rchecks>
 </entry>
 
 <entry>
@@ -1710,7 +1710,7 @@ On se préoccupe moins des critiques et des louanges.</phrase>
 <phrase>c'est une idée bien ancrée
 = it's a firmly rooted idea
 Une confiance qui s'ancrait dans toutes les sources d'aide, d'amour, d'affection autour d'eux.</phrase>
-<rchecks>2</rchecks>
+<rchecks>3</rchecks>
 </entry>
 
 <entry>
@@ -1720,7 +1720,7 @@ Une confiance qui s'ancrait dans toutes les sources d'aide, d'amour, d'affection
 <translation>woodcutter, lumberjack</translation>
 <phrase>un bûcheron a coupé un arbre dans une forêt de Norvége</phrase>
 <note>f bûcheronne [byʃrɔn]</note>
-<rchecks>1</rchecks>
+<rchecks>2</rchecks>
 </entry>
 
 <entry>
@@ -1738,7 +1738,7 @@ Une confiance qui s'ancrait dans toutes les sources d'aide, d'amour, d'affection
 <usage>vi</usage>
 <translation>tumble down, plunge</translation>
 <phrase>Au bout d'un moment, ce n'est plus une douche, c'est un Niagara qui nous dégringole dessus!</phrase>
-<rchecks>3</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -1748,7 +1748,7 @@ Une confiance qui s'ancrait dans toutes les sources d'aide, d'amour, d'affection
 <translation>strand, fibre</translation>
 <phrase>un brin de = a (tiny) bit of
 un brin de génie = a touch of genius</phrase>
-<rchecks>3</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -1795,7 +1795,7 @@ on pourrait formuler le diagnostic du Buddha en disant que "tout grince"</phrase
 <usage>nf</usage>
 <translation>(d'un oef) hatching; (litt.) opening (out), dawning</translation>
 <phrase>jusqu'à leur éclosion = until they hatch</phrase>
-<rchecks>2</rchecks>
+<rchecks>5</rchecks>
 </entry>
 
 <entry>
@@ -1814,7 +1814,7 @@ on pourrait formuler le diagnostic du Buddha en disant que "tout grince"</phrase
 <translation>rate, level</translation>
 <phrase>au fur et à mesure = gradually, as we go along, bit by bit
 les émotions qui nous perturbaient auparavant se dissolvent au fur et à mesure qu'elles apparaissent</phrase>
-<rchecks>3</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -1824,7 +1824,7 @@ les émotions qui nous perturbaient auparavant se dissolvent au fur et à mesure
 <translation>yoke</translation>
 <phrase>secouer le joug = to throw off one's yoke
 S'il est possible de se libérer du joug des émotions destructices, ...</phrase>
-<rchecks>1</rchecks>
+<rchecks>2</rchecks>
 </entry>
 
 <entry>
@@ -1867,7 +1867,7 @@ On tombera à nouveau sous leur pouvoir dès que leur charge émotionnelle aura 
 <phrase>ils se sont fait refouler à la frontière
 = they were driven back at the border
 Cela ne veut pas dire qu'il faut refouler les émotions.</phrase>
-<rchecks>8</rchecks>
+<rchecks>13</rchecks>
 </entry>
 
 <entry>
@@ -1877,7 +1877,7 @@ Cela ne veut pas dire qu'il faut refouler les émotions.</phrase>
 <translation>bluff; surprise, astound, impress</translation>
 <phrase>Pour jouer au poker, il faut savoir bluffer.
 Tu m'as bluffé! Je ne savais pas que tu dansais aussi bien.</phrase>
-<rchecks>1</rchecks>
+<rchecks>4</rchecks>
 </entry>
 
 <entry>
@@ -1886,7 +1886,7 @@ Tu m'as bluffé! Je ne savais pas que tu dansais aussi bien.</phrase>
 <usage>nm</usage>
 <translation>irritation, annoyance</translation>
 <phrase>C'est en effet beaucoup plus facile de travailler sur nos petits agacements, nos petites tristesses, nos petites inquiétudes, nos petites hontes, que sur les grandes flambées des même émotions.</phrase>
-<rchecks>3</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -1896,7 +1896,7 @@ Tu m'as bluffé! Je ne savais pas que tu dansais aussi bien.</phrase>
 <translation>uncap, uncork, open</translation>
 <phrase>déboucher sur = to open into, to lead to
 La pratique régulière de la pleine conscience débouche sur une meilleure régulation émotionnelle.</phrase>
-<rchecks>4</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -1905,7 +1905,7 @@ La pratique régulière de la pleine conscience débouche sur une meilleure rég
 <usage>nm</usage>
 <translation>cashew (nut)</translation>
 <phrase>tout bêtement, j'adore les noix de cajou, en manger me donne des aphtes, donc, j'en mange quand même!</phrase>
-<rchecks>5</rchecks>
+<rchecks>8</rchecks>
 </entry>
 
 <entry>
@@ -1914,7 +1914,7 @@ La pratique régulière de la pleine conscience débouche sur une meilleure rég
 <usage>nm</usage>
 <translation>mouth ulcer, aphtha</translation>
 <phrase>tout bêtement, j'adore les noix de cajou, en manger me donne des aphtes, donc, j'en mange quand même!</phrase>
-<rchecks>1</rchecks>
+<rchecks>2</rchecks>
 </entry>
 
 <entry>
@@ -1923,7 +1923,7 @@ La pratique régulière de la pleine conscience débouche sur une meilleure rég
 <usage>vt; v pron intr</usage>
 <translation>blunt, take the edge off; become blunt, lose its edge</translation>
 <phrase>Mais comme il est dans la nature des sensations agréables de s'émousser au fur et à mesure qu'on les éprouve, elle devient peu à peu neutre et finit même par être désagréable.</phrase>
-<rchecks>8</rchecks>
+<rchecks>12</rchecks>
 </entry>
 
 <entry>
@@ -1933,7 +1933,7 @@ La pratique régulière de la pleine conscience débouche sur une meilleure rég
 <translation>itch, be itching</translation>
 <phrase>ce pull me démange = that pullover makes me itch
 il est bon de se gratter quand ça démange, mais il est encore plus grand quand ça ne démange plus</phrase>
-<rchecks>6</rchecks>
+<rchecks>11</rchecks>
 </entry>
 
 <entry>
@@ -1944,7 +1944,7 @@ il est bon de se gratter quand ça démange, mais il est encore plus grand quand
 <phrase>cette route aboutit à la prison
 = this road ends at the prison
 Certains s'imaginent que le fait de se libérer des émotions aboutit à un vide intérieur qui nous transforme en zombies.</phrase>
-<rchecks>1</rchecks>
+<rchecks>2</rchecks>
 </entry>
 
 <entry>
@@ -1954,7 +1954,7 @@ Certains s'imaginent que le fait de se libérer des émotions aboutit à un vide
 <translation>stupid; fool, idiot</translation>
 <phrase>il n'est pas sot = he's no fool</phrase>
 <note>f sotte [sɔt]</note>
-<rchecks>1</rchecks>
+<rchecks>2</rchecks>
 </entry>
 
 <entry>
@@ -1964,7 +1964,7 @@ Certains s'imaginent que le fait de se libérer des émotions aboutit à un vide
 <translation>armband</translation>
 <phrase>brassard de deuil = black armband
 Il a fallu que je monte chez Emmanuel pour lui emprunter une cravate noire et un brassard.</phrase>
-<rchecks>3</rchecks>
+<rchecks>4</rchecks>
 </entry>
 
 <entry>
@@ -1973,7 +1973,7 @@ Il a fallu que je monte chez Emmanuel pour lui emprunter une cravate noire et un
 <usage>nm</usage>
 <translation>(zoologie) chatter; prattle</translation>
 <phrase>On aurait dit d'un jacassement assourdi de perruches.</phrase>
-<rchecks>1</rchecks>
+<rchecks>3</rchecks>
 </entry>
 
 <entry>
@@ -2009,7 +2009,7 @@ Deux d'entre eux, au centre, supportaient une bière recouverte de son couvercle
 <usage>nm</usage>
 <translation>hearse</translation>
 <phrase>Ici on n'a pas le temps, on ne s'est pas fait à l'idée que déjà il faut courir derrière le corbillard.</phrase>
-<rchecks>6</rchecks>
+<rchecks>8</rchecks>
 </entry>
 
 <entry>
@@ -2019,7 +2019,7 @@ Deux d'entre eux, au centre, supportaient une bière recouverte de son couvercle
 <translation>nod</translation>
 <phrase>dodeliner de la tête = to nod gently
 C'est à ce moment que je me suis aperçu qu'ils étaient tous assis en face de moi à dodeliner.</phrase>
-<rchecks>2</rchecks>
+<rchecks>5</rchecks>
 </entry>
 
 <entry>
@@ -2031,7 +2031,7 @@ C'est à ce moment que je me suis aperçu qu'ils étaient tous assis en face de 
 il était affaissé sur sa chaise = he was slumped in his chair
 Ils étaiet affaissés, mornes et silencieux.</phrase>
 <note>(f affaissée)</note>
-<rchecks>5</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -2049,7 +2049,7 @@ Ils étaiet affaissés, mornes et silencieux.</phrase>
 <usage>nm; nm pl</usage>
 <translation>kidney; back, loin</translation>
 <phrase>avoir mal aux reins = to have a backache</phrase>
-<rchecks>4</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -2058,7 +2058,7 @@ Ils étaiet affaissés, mornes et silencieux.</phrase>
 <usage>nm</usage>
 <translation>tar, bitumen</translation>
 <phrase>Le soleil avait fait éclater le goudron.</phrase>
-<rchecks>6</rchecks>
+<rchecks>9</rchecks>
 </entry>
 
 <entry>
@@ -2078,7 +2078,7 @@ Dans la rue, à cause de ma fatigue et aussi parce que nous n'avions pas ouvert 
 <usage>nm</usage>
 <translation>undershirt, vest, singlet; (de bain) swimming costume, bathing costume, (swimming) trunks</translation>
 <phrase>Marie m'a montré son sac en toile cirée où elle avait mis nos deux maillots et une serviette.</phrase>
-<rchecks>6</rchecks>
+<rchecks>11</rchecks>
 </entry>
 
 <entry>
@@ -2090,7 +2090,7 @@ Dans la rue, à cause de ma fatigue et aussi parce que nous n'avions pas ouvert 
 = man is a thinking reed
 L'autre soufflait dans un petit roseau et répétait sans cesse les trois notes qu'il obtenait de son instrument.</phrase>
 <note>pl roseaux</note>
-<rchecks>4</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -2100,7 +2100,7 @@ L'autre soufflait dans un petit roseau et répétait sans cesse les trois notes 
 <translation>pant, gasp (for breath)</translation>
 <phrase>haleter d'émotion = to be breathless with emotion
 Sur le sable, la mer haletait de toute la respiration rapide et étouffée de ses petites vagues.</phrase>
-<rchecks>5</rchecks>
+<rchecks>9</rchecks>
 </entry>
 
 <entry>
@@ -2111,7 +2111,7 @@ Sur le sable, la mer haletait de toute la respiration rapide et étouffée de se
 <phrase>le bébé a été étouffé
 = the baby suffocated to death, the baby was smothered
 Sur le sable, la mer haletait de toute la respiration rapide et étouffée de ses petites vagues.</phrase>
-<rchecks>3</rchecks>
+<rchecks>5</rchecks>
 </entry>
 
 <entry>
@@ -2120,7 +2120,7 @@ Sur le sable, la mer haletait de toute la respiration rapide et étouffée de se
 <usage>adj</usage>
 <translation>slack, becalmed</translation>
 <phrase>Le bruit des vagues était encore plus paresseux, plus étale qu'à midi.</phrase>
-<rchecks>7</rchecks>
+<rchecks>12</rchecks>
 </entry>
 
 <entry>
@@ -2129,7 +2129,7 @@ Sur le sable, la mer haletait de toute la respiration rapide et étouffée de se
 <usage>vt</usage>
 <translation>cart, carry along; (fleuve) wash along</translation>
 <phrase>La mer a charrié un souffle épais et ardent.</phrase>
-<rchecks>6</rchecks>
+<rchecks>10</rchecks>
 </entry>
 
 <entry>
@@ -2139,7 +2139,7 @@ Sur le sable, la mer haletait de toute la respiration rapide et étouffée de se
 <translation>trigger</translation>
 <phrase>appuyez sur la gâchette = pull the trigger
 La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, dans le bruit à la fois sec et assourdissant, que tout a commencé.</phrase>
-<rchecks>4</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -2148,7 +2148,7 @@ La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, da
 <usage>nf</usage>
 <translation>(hockey) stick, (golf) club; (d'un revolver) grip, butt</translation>
 <phrase>La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, dans le bruit à la fois sec et assourdissant, que tout a commencé.</phrase>
-<rchecks>4</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -2158,7 +2158,7 @@ La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, da
 <translation>(yeux) sunken, deep-set</translation>
 <phrase>j'ai vu un homme aux traits fins, aux yeux bleus enfoncés, grand, avec une longue moustache grise et d'abondants cheveux presque blancs</phrase>
 <note>f enfoncée</note>
-<rchecks>5</rchecks>
+<rchecks>12</rchecks>
 </entry>
 
 <entry>
@@ -2178,7 +2178,7 @@ La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, da
 <usage>nf</usage>
 <translation>laziness, idleness, indolence</translation>
 <phrase>Mais tout cela, au fond, n'avait pas grande utilité et j'y ai renoncé par paresse.</phrase>
-<rchecks>3</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -2187,7 +2187,7 @@ La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, da
 <usage>nm</usage>
 <translation>clerk (of the court), registrar</translation>
 <phrase>Un jeune greffier est venu s'installer presque dans mon dos.</phrase>
-<rchecks>4</rchecks>
+<rchecks>6</rchecks>
 </entry>
 
 <entry>
@@ -2196,7 +2196,7 @@ La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, da
 <usage>vt</usage>
 <translation>depict, portray</translation>
 <phrase>Il m'a d'abord dit qu'on me dépeignait comme étant d'un caractère taciturn et renfermé.</phrase>
-<rchecks>4</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -2205,7 +2205,7 @@ La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, da
 <usage>vt; v pron+prep</usage>
 <translation>mark off, mark out, limit, restrict; be limited, be restricted (to), limit oneself (to)</translation>
 <phrase>On se bornait à me faire préciser certains points de mes déclarations précédentes.</phrase>
-<rchecks>5</rchecks>
+<rchecks>7</rchecks>
 </entry>
 
 <entry>
@@ -2215,7 +2215,7 @@ La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, da
 <translation>mocking, derisive</translation>
 <phrase>Les journalistes avaient tous le même air indifférent et un peu narquois.</phrase>
 <note>f narquoise [narkwaz]</note>
-<rchecks>5</rchecks>
+<rchecks>9</rchecks>
 </entry>
 
 <entry>
@@ -2225,8 +2225,8 @@ La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, da
 <translation>ceiling</translation>
 <phrase>Le lustre est suspendu au plafond = The light is suspended from the ceiling
 </phrase>
-<rchecks>3</rchecks>
 <wchecks>4</wchecks>
+<rchecks>4</rchecks>
 </entry>
 
 <entry>
@@ -2234,8 +2234,8 @@ La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, da
 <pronunciation>[aʀbʀ]</pronunciation>
 <usage>nm</usage>
 <translation>tree</translation>
-<rchecks>5</rchecks>
 <wchecks>5</wchecks>
+<rchecks>10</rchecks>
 </entry>
 
 <entry>
@@ -2245,8 +2245,8 @@ La gâchette a cédé, j'ai touché le ventre poli de la crosse et c'est là, da
 <translation>primrose</translation>
 <phrase>Les primevères sont les premières fleurs à fleurir après l'hiver.</phrase>
 <note>petite plante fleurissant tôt</note>
-<rchecks>5</rchecks>
 <wchecks>5</wchecks>
+<rchecks>9</rchecks>
 </entry>
 
 </dictionary>
