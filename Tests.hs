@@ -16,12 +16,12 @@ randomEntry d = do j <- randomRIO (0::Int,length d -1)
 
 nthReadEntry :: Dictionary -> Int -> DEntry
 nthReadEntry (e : es) i =
-  if i<=c then e else nthReadEntry es (i-c)
+  if i<c then e else nthReadEntry es (i-c)
     where c = readChecks e
           
 nthWriteEntry :: Dictionary -> Int -> DEntry
 nthWriteEntry (e : es) i =
-  if i<=c then e else nthWriteEntry es (i-c)
+  if i<c then e else nthWriteEntry es (i-c)
     where c = writeChecks e
 
 
