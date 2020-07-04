@@ -205,8 +205,10 @@ rtAction lw lu e = do
   tr <- readEntry (luwInput lu)
 
   newRChecks <- if (checkTranslation e tr)
-    then (set (luwMessage lu) [ #label := "Correct!" ] >> return (deRChecks e - 1))
-    else (set (luwMessage lu) [ #label := "Wrong!" ] >> return (deRChecks e + 1))
+    then (set (luwMessage lu) [ #label := "Correct!" ]
+          >> return (max (deRChecks e - 1) 0))
+    else (set (luwMessage lu) [ #label := "Wrong!" ]
+          >> return (if deRChecks e == 0 then 5 else deRChecks e + 1))
 
   let e' = updateRChecks e newRChecks
   lwDisplayEntry lw e'
@@ -234,11 +236,13 @@ nextWTAction lw lu = do
 
 wtAction :: LangWidget -> LookUpWidget -> DEntry -> IO ()
 wtAction lw lu e = do
-  tr <- readEntry (luwInput lu)
+  w <- readEntry (luwInput lu)
 
-  newWChecks <- if (tr == deWord e)
-    then (set (luwMessage lu) [ #label := "Correct!" ] >> return (deWChecks e - 1))
-    else (set (luwMessage lu) [ #label := "Wrong!" ] >> return (deWChecks e + 1))
+  newWChecks <- if (w == deWord e)
+    then (set (luwMessage lu) [ #label := "Correct!" ]
+         >> return (max (deWChecks e - 1) 0))
+    else (set (luwMessage lu) [ #label := "Wrong!" ]
+         >> return (if deWChecks e == 0 then 5 else deWChecks e + 1))
 
   let e' = updateWChecks e newWChecks
   lwDisplayEntry lw e'

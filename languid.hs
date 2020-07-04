@@ -39,3 +39,4 @@ showStats dic = do
   putStrLn ("Total read checks    : " ++ show (totalWChecks dic))
 
 
+
