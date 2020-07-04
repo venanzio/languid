@@ -18,7 +18,11 @@ import LookUpGUI
 main :: IO ()
 main = do
   args <- getArgs
-  let dictFile = head args
+  let fileName = head args
+      l = length fileName
+      dictFile = if (drop (l - 4) fileName == ".dic")
+                   then (take (l - 4) fileName)
+                   else fileName
   dic <- readDictionary (dictFile++".dic")
   writeDictionary (dictFile++".dic.bak") dic  -- back up
 

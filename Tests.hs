@@ -54,8 +54,7 @@ randREntry :: Dictionary -> IO DEntry
 randREntry dic = do
   let rchecks = totalRChecks dic
   ne <- randomRIO (0, max rchecks totalChecks - 1)
-  if ne > rchecks then do putStrLn "jolly word"
-                          randomEntry dic
+  if ne > rchecks then randomEntry dic
                   else return (nthReadEntry dic ne)
 
 -- Reading test
