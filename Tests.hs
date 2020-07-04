@@ -15,11 +15,13 @@ randomEntry d = do j <- randomRIO (0::Int,length d -1)
 -- Selecting an entry, using checks as weights
 
 nthReadEntry :: Dictionary -> Int -> DEntry
+nthReadEntry [] _ = error "index too large"
 nthReadEntry (e : es) i =
   if i<c then e else nthReadEntry es (i-c)
     where c = readChecks e
           
 nthWriteEntry :: Dictionary -> Int -> DEntry
+nthWriteEntry [] _ = error "index too large"
 nthWriteEntry (e : es) i =
   if i<c then e else nthWriteEntry es (i-c)
     where c = writeChecks e
@@ -51,7 +53,7 @@ updateWChecks (DEntry w l) c = DEntry w (upEF l)
 randREntry :: Dictionary -> IO DEntry
 randREntry dic = do
   let rchecks = totalRChecks dic
-  ne <- randomRIO (0, max rchecks totalChecks)
+  ne <- randomRIO (0, max rchecks totalChecks - 1)
   if ne > rchecks then do putStrLn "jolly word"
                           randomEntry dic
                   else return (nthReadEntry dic ne)
@@ -94,7 +96,7 @@ readTest dic = do
 randWEntry :: Dictionary -> IO DEntry
 randWEntry dic = do
   let wchecks = totalWChecks dic
-  ne <- randomRIO (0, max wchecks totalChecks)
+  ne <- randomRIO (0, max wchecks totalChecks - 1)
   if ne > wchecks then do putStrLn "jolly word"
                           randomEntry dic
                   else return (nthWriteEntry dic ne)

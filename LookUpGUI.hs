@@ -183,8 +183,6 @@ luAction lw lu = do
 
 nextRTAction :: LangWidget -> LookUpWidget -> IO ()
 nextRTAction lw lu = do
-  set (luwChangeMode lu) [ #label := "mode: read test" ]
-
   dic <- readIORef (luwDictionary lu)
   e <- randREntry dic
   writeIORef (luwMode lu) (ReadTest e)
@@ -194,6 +192,7 @@ nextRTAction lw lu = do
   
   writeEntry (lwWord lw) (deWord e)
   writeEntry (lwPronunciation lw) (dePronunciation e)
+  writeVText (lwUsage lw) (deUsage e)
   setSimpleSB (lwRChecks lw) (deRChecks e)
   setSimpleSB (lwWChecks lw) (deWChecks e)
 
@@ -218,8 +217,6 @@ rtAction lw lu e = do
 
 nextWTAction :: LangWidget -> LookUpWidget -> IO ()
 nextWTAction lw lu = do
-  set (luwChangeMode lu) [ #label := "mode: write test" ]
-
   dic <- readIORef (luwDictionary lu)
   e <- randWEntry dic
   writeIORef (luwMode lu) (WriteTest e)

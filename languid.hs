@@ -38,3 +38,4 @@ showStats dic = do
   putStrLn ("\nWrite training words : " ++ show (totalWWords dic))
   putStrLn ("Total read checks    : " ++ show (totalWChecks dic))
 
+
