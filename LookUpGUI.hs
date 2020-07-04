@@ -204,13 +204,22 @@ rtAction :: LangWidget -> LookUpWidget -> DEntry -> IO ()
 rtAction lw lu e = do
   tr <- readEntry (luwInput lu)
 
-  newRChecks <- if (checkTranslation e tr)
-    then (set (luwMessage lu) [ #label := "Correct!" ]
-          >> return (max (deRChecks e - 1) 0))
-    else (set (luwMessage lu) [ #label := "Wrong!" ]
-          >> return (if deRChecks e == 0 then 5 else deRChecks e + 1))
+  let checkResult = (checkTranslation e tr)
 
-  let e' = updateRChecks e newRChecks
+  set (luwMessage lu) [ #label := if checkResult
+                                    then "Correct!"
+                                    else "Wrong!"]
+    
+  let rchecks = deRChecks e
+      wchecks = deWChecks e
+      newRChecks = if checkResult
+        then (max (deRChecks e - 1) 0)
+        else (if deRChecks e == 0 then 5 else deRChecks e + 1)
+      newWChecks = if checkResult && rchecks == 1
+        then (max wchecks 5)
+        else wchecks
+
+  let e' = updateWChecks (updateRChecks e newRChecks) newWChecks
   lwDisplayEntry lw e'
   modifyIORef (luwDictionary lu) (\dic -> updateDictionary dic e')
 
