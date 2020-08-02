@@ -11,3 +11,5 @@ text-based interface: you can choose to do
 languid.hs
   GUI interface that uses gi-gtk
   Unfortunately it doesn't work any longer
+
+Maybe an issue with my cabal settings
