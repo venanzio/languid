@@ -1,6 +1,8 @@
 # languid
 Library and executable for language training
 
+Uses an XML encoding for dictionaries
+
 
 ## langtest.hs
 text-based interface: you can choose to do
